@@ -1,0 +1,29 @@
+﻿@page
+@model Homework_1.Pages.Task5Model
+@{
+}
+
+<h1 class="text-center">
+	Task 5
+</h1>
+<h3 class="text-center">
+	<b>Задание</b>: Создайте и запустите базовое приложение ASP.NET
+	Core, построенное на основании ASP.NET Razor Pages. Добавьте новую страницу в базовый каркас. На этой странице
+	нужно выводить случайную цитату и автора этой цитаты.
+</h3>
+<h4 class="text-center mt-5">
+	<b>Результат</b>:
+	<p>Author: <span id="author"></span></p>
+	<p>Quote: <span id="quote"></span></p>
+</h4>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+	$.get("https://api.quotable.io/random", {}).done((data) => {
+		$.get(`https://api.mymemory.translated.net/get?q=${data.author}&langpair=en|ru`, {}).done((data) => {
+			$('#author').text(data.responseData.translatedText);
+		});
+		$.get(`https://api.mymemory.translated.net/get?q=${data.content}&langpair=en|ru`, {}).done((data) => {
+			$('#quote').text(data.responseData.translatedText);
+		});
+	});
+</script>
