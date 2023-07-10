@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "Cp76+JM5Pa/xK1C13ZUsEJBkjxuk0dGinBAZ1DxrMjQ=",
+  "Source": "Task_51",
+  "BasePath": "_content/Task_51",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Task_51\\wwwroot",
+      "Source": "Task_51",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_2\\Homework_2\\Task_51\\wwwroot\\",
+      "BasePath": "_content/Task_51",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_2\\Homework_2\\Task_51\\wwwroot\\css\\style.css",
+      "SourceId": "Task_51",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_2\\Homework_2\\Task_51\\wwwroot\\",
+      "BasePath": "_content/Task_51",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_2\\Homework_2\\Task_51\\wwwroot\\js\\script.js",
+      "SourceId": "Task_51",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_2\\Homework_2\\Task_51\\wwwroot\\",
+      "BasePath": "_content/Task_51",
+      "RelativePath": "js/script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\script.js"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 10px;
+    display: flex;
+}
+
+h1 {
+    color: #333333;
+    text-align: center;
+}
+
+p {
+    color: #666666;
+    line-height: 1.5;
+}
+
+.info {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+    .contact-info h2 {
+        color: #333333;
+        margin-bottom: 10px;
+    }
+
+    .contact-info p {
+        color: #666666;
+        margin: 0;
+    }
+
+.restaurant-list {
+    width: 20%;
+    margin-right: 5px;
+}
+
+.active {
+    font-weight: 500;
+}
