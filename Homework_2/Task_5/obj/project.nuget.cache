@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tTLEui3K2Zn6XVoUhAzPzV5pOkdX8eyD+HxUqHdY0H9uykWEyxxYwreRxPBeEFrkqxTr1J3MNC1RvlN63x8OMQ==",
+  "dgSpecHash": "W+KnQJk424qqWNnPib7BZP+6J9GfHgdUMPLI8IIbVhcPgRy4ODotf3rZvR4JEVCl5gOGjXw/wOjfRP1qI/t7JA==",
   "success": true,
   "projectFilePath": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_2\\Task_5\\Task_5.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Artem\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

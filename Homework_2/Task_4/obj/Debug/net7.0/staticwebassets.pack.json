@@ -1,11 +1,11 @@
 {
   "Files": [
     {
-      "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_2\\Homework_2\\Task_4\\wwwroot\\css\\style.css",
+      "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_2\\Task_4\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_2\\Homework_2\\Task_4\\wwwroot\\js\\script.js",
+      "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_2\\Task_4\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
     },
     {

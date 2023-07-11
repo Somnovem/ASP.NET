@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "56qVAJPxq767KxMl7eEQN/aGjap8lkk3awN2uzM58Ow=",
+  "Hash": "egnYfoLbJ5Q9o6Bctf18zUdIRlPMWaY0W6ngvapP1uw=",
   "Source": "Task_3",
   "BasePath": "_content/Task_3",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Task_3\\wwwroot",
+      "Source": "Task_3",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_2\\Task_3\\wwwroot\\",
+      "BasePath": "_content/Task_3",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_2\\Task_3\\wwwroot\\css\\style.css",
+      "SourceId": "Task_3",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_2\\Task_3\\wwwroot\\",
+      "BasePath": "_content/Task_3",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    }
+  ]
 }

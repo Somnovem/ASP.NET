@@ -1,30 +1,3 @@
-var restaurants = [
-    {
-        name: "Restaurant A",
-        address: "123 Main Street",
-        phone: "(123) 456-7890",
-        email: "info@restaurantA.com",
-        about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum sem et tincidunt posuere.",
-        hours: "Monday - Friday: 9:00 AM - 10:00 PM"
-    },
-    {
-        name: "Restaurant B",
-        address: "456 Elm Street",
-        phone: "(456) 789-0123",
-        email: "info@restaurantB.com",
-        about: "Sed sed felis non nunc tincidunt auctor at eget justo. Nullam aliquam pretium nisi ut rutrum.",
-        hours: "Monday - Saturday: 10:00 AM - 11:00 PM"
-    },
-    {
-        name: "Restaurant C",
-        address: "789 Oak Street",
-        phone: "(789) 012-3456",
-        email: "info@restaurantC.com",
-        about: "In lobortis tellus ac tortor placerat, et faucibus nisl pulvinar. Fusce consectetur mi ligula, ut.",
-        hours: "Tuesday - Sunday: 11:00 AM - 9:00 PM"
-    }
-];
-
 var restaurantList = document.getElementById("restaurant-list");
 var address = document.getElementById("address");
 var title = document.getElementById("name");
@@ -33,28 +6,52 @@ var email = document.getElementById("email");
 var about = document.getElementById("about");
 var hours = document.getElementById("hours");
 var listItems = [];
+var restaurants = [];
 var lastSelectedItem = null;
 
-for (var i = 0; i < restaurants.length; ++i) {
+async function getRestaurants() {
+    const response = await fetch("/api/users", {
+        method: "GET",
+        headers: { "Accept": "application/json" }
+    });
+    if (response.ok) {
+        const restaurantsJson = await response.json();
+        for (var i = 0; i < restaurantsJson.length; ++i)
+        {
+            if (i == 0) {
+                addRestaurant(restaurantsJson[i],true);
+            }
+            else {
+                addRestaurant(restaurantsJson[i]);
+            }
+        }
+    }
+}
+
+getRestaurants();
+
+function addRestaurant(restaurant, isFirst = false) {
+    restaurants.push(restaurant);
     var listItem = document.createElement('li');
-    listItem.innerHTML = restaurants[i].name;
+    listItem.innerHTML = restaurant.name;
     listItem.classList.add('list-group-item');
-    if (i == 0) {
+    if (isFirst) {
         listItem.classList.add('active');
         lastSelectedItem = listItem;
+        showRestaurantInfo(restaurants[0]);
     }
-    listItem.addEventListener('click', (e) => {
-        if (e.target == lastSelectedItem) return;
-        e.target.classList.add('active');
-        lastSelectedItem.classList.remove('active');
-        lastSelectedItem = e.target;
-        showRestaurantInfo(restaurants[getItemIndex(e.target)]);
-    });
-    listItems[i] = listItem;
+    listItem.addEventListener('click', (e) => { changeSelectedItem(e); });
+    listItems.push(listItem);
     restaurantList.appendChild(listItem);
 }
 
-showRestaurantInfo(restaurants[0]);
+function changeSelectedItem(e) {
+    if (e.target == lastSelectedItem) return;
+    e.target.classList.add('active');
+    lastSelectedItem.classList.remove('active');
+    lastSelectedItem = e.target;
+    showRestaurantInfo(restaurants[getItemIndex(e.target)]);
+}
 
 function getItemIndex(listItem) {
     for (var i = 0; i < listItems.length; ++i) {
