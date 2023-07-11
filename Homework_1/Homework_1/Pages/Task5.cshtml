@@ -13,17 +13,12 @@
 </h3>
 <h4 class="text-center mt-5">
 	<b>Результат</b>:
-	<p>Author: <span id="author"></span></p>
-	<p>Quote: <span id="quote"></span></p>
+	@if (@Model.Quote == null)
+	{
+		<p>Sorry! Service is currently unavaliable. Try again later!</p>
+	}
+	else{
+		<p>Author: <span id="author">@Model.Quote.Author</span></p>
+		<p>Quote: <span id="quote">@Model.Quote.Content</span></p>
+	}
 </h4>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script>
-	$.get("https://api.quotable.io/random", {}).done((data) => {
-		$.get(`https://api.mymemory.translated.net/get?q=${data.author}&langpair=en|ru`, {}).done((data) => {
-			$('#author').text(data.responseData.translatedText);
-		});
-		$.get(`https://api.mymemory.translated.net/get?q=${data.content}&langpair=en|ru`, {}).done((data) => {
-			$('#quote').text(data.responseData.translatedText);
-		});
-	});
-</script>

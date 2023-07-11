@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_1\\Homework_1.csproj": {}
+    "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_1\\Homework_1\\Homework_1.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_1\\Homework_1.csproj": {
+    "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_1\\Homework_1\\Homework_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_1\\Homework_1.csproj",
+        "projectUniqueName": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_1\\Homework_1\\Homework_1.csproj",
         "projectName": "Homework_1",
-        "projectPath": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_1\\Homework_1.csproj",
+        "projectPath": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_1\\Homework_1\\Homework_1.csproj",
         "packagesPath": "C:\\Users\\Artem\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_1\\obj\\",
+        "outputPath": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_1\\Homework_1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Artem\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
