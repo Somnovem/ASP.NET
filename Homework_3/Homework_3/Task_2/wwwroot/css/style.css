@@ -1,0 +1,27 @@
+﻿body {
+    padding: 20px;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.upload-form h2 {
+    margin-bottom: 20px;
+}
+
+.upload-form input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.upload-form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
