@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cZ97YDKQRo9GyHjSadewIoDJ1iBgcKaBOAvAdoQGE5I=",
+  "Hash": "v04TW6/DX0t9fyHGjCqpaHe8pBWOkozPoN4yL9CG8Vs=",
   "Source": "Task_2",
   "BasePath": "_content/Task_2",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Task_2\\wwwroot",
       "Source": "Task_2",
-      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Homework_3\\Task_2\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Task_2\\wwwroot\\",
       "BasePath": "_content/Task_2",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Homework_3\\Task_2\\wwwroot\\css\\notfound.css",
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Task_2\\wwwroot\\css\\notfound.css",
       "SourceId": "Task_2",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Homework_3\\Task_2\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Task_2\\wwwroot\\",
       "BasePath": "_content/Task_2",
       "RelativePath": "css/notfound.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\css\\notfound.css"
     },
     {
-      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Homework_3\\Task_2\\wwwroot\\css\\style.css",
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Task_2\\wwwroot\\css\\style.css",
       "SourceId": "Task_2",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Homework_3\\Task_2\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Task_2\\wwwroot\\",
       "BasePath": "_content/Task_2",
       "RelativePath": "css/style.css",
       "AssetKind": "All",

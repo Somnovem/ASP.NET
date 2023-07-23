@@ -1,0 +1,25 @@
+﻿@page
+@model Task_2.Pages.ReferencesModel
+@{
+    ViewData["Title"] = "References";
+}
+
+<div class="container mt-5">
+    <h1 class="display-4 container-header">D&D Was Mentioned</h1>
+    <ul class="list-group">
+        @foreach (var refer in Model.DNDShows)
+        {
+            <li class="list-group-item">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h2>@refer.Name</h2>
+                        <p>@refer.Description</p>
+                    </div>
+                    <div class="col-auto">
+                        <a href="@refer.WikiLink" target="_blank" class="btn btn-primary btn-wiki-link">Visit Wiki</a>
+                    </div>
+                </div>
+            </li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,94 @@
+﻿html {
+  --bgColorMenu: #1d1d27;
+  --duration: 0.7s;
+}
+
+.nav-header {
+  display:flex; 
+  justify-content:center; 
+  margin-bottom:40px;
+  margin-top:10px;
+}
+
+.menu {
+  margin: 0;
+  display: flex;
+  width: 80%;
+  font-size: 1.5em;
+  color: white;
+  padding: 0 0.5em;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bgColorMenu);
+  transform: scaleY(-1);
+  border-radius: 20px;
+}
+
+.menu__item {
+  all: unset;
+  flex-grow: 1;
+  z-index: 100;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  border-radius: 50%;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  will-change: transform;
+  justify-content: center;
+  padding: 0.55em 0 0.85em;
+  transition: transform var(--timeOut, var(--duration));
+}
+
+.menu__item:hover {
+  color: white;
+}
+
+.menu__item::before {
+  content: "";
+  z-index: -1;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  position: absolute;
+  transform: scale(0);
+  transition: background-color var(--duration), transform var(--duration);
+}
+
+.menu__item.active {
+  transform: translate3d(0, -0.8em, 0);
+}
+
+.menu__item.active::before {
+  transform: scale(1);
+  background-color: var(--bgColorItem);
+}
+
+.menu__item > i {
+  transform: scaleY(-1);
+}
+
+.menu__border {
+  left: 0;
+  bottom: 99%;
+  width: 8em;
+  height: 1.5em;
+  position: absolute;
+  clip-path: url(#menu);
+  will-change: transform;
+  background-color: var(--bgColorMenu);
+  transition: transform var(--timeOut, var(--duration));
+}
+
+.svg-container {
+    width:0;
+    height:50px;
+}
+
+@media screen and (max-width: 50em) {
+  .menu {
+    font-size: 0.8em;
+  }
+}

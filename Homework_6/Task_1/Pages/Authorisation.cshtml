@@ -1,0 +1,75 @@
+﻿@page
+@model Task_1.Pages.AuthorisationModel
+@{
+    ViewData["Title"] = "Authorise";
+}
+
+
+<link rel="stylesheet" href="~/css/authorise.css">
+
+@if (Model.IsLoggedIn)
+{
+    <h1>You are already logged in,@Model.Username!</h1>
+}
+else
+{
+    <div class="wrapper">
+        <div class="form-wrapper sign-up">
+            <form method="post" asp-page-handler="Register">
+                <h2>Sign Up</h2>
+                <div class="input-group">
+                    <input id="registerUsername" name="username" type="text" required>
+                    <label for="registerUsername">Username</label>
+                </div>
+                <div class="input-group">
+                    <input id="registerEmail" name="email" type="email" required>
+                    <label for="registerEmail">Email</label>
+                </div>
+                <div class="input-group">
+                    <input id="registerPassword" name="password" type="password" required>
+                    <label for="registerPassword">Password</label>
+                </div>
+                <div class="mb-3">
+                    <label for="registerGender" class="form-label">Gender</label>
+                    <select class="form-select" id="registerGender" name="gender" required>
+                        <option value="" disabled selected>Select your gender</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="O">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="registerBirthday" class="form-label">Birthday</label>
+                    <input type="date" class="form-control" id="registerBirthday" name="birthday" required>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <div class="sign-link" style="margin-bottom:50px;">
+                    <p>Already have an account? <a href="#" class="signIn-link">Sign In</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-wrapper sign-in">
+            <form method="post" asp-page-handler="Login">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input id="loginUsername" name="username" type="text" required>
+                    <label for="loginUsername">Username</label>
+                </div>
+                <div class="input-group">
+                    <input id="loginPassword" name="password" type="password" required>
+                    <label for="loginPassword">Password</label>
+                </div>
+                <div class="forgot-pass">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="sign-link">
+                    <p>Don't have an account? <a href="#" class="signUp-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="~/js/authorise.js" asp-append-version="true"></script>
+}
+

@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container mt-5 books-container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="input-group mb-3">
+                <input type="text" id="searchInput" class="form-control" placeholder="Enter a book name, word, or phrase">
+                <button id="searchButton" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div id="results"></div>
+        </div>
+    </div>
+</div>

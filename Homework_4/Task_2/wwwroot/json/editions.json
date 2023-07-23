@@ -1,0 +1,30 @@
+﻿[
+  {
+    "Name": "Original D&D (1974)",
+    "Description": "- Three booklets: Men & Magic, Monsters & Treasure, and Underworld & Wilderness Adventures.\n- Simple rules, focused on exploration and dungeon crawling.\n- Emphasis on improvisation and the Dungeon Master's (DM) role.\n- The beginning of tabletop RPGs."
+  },
+  {
+    "Name": "AD&D 1st Edition (1977)",
+    "Description": "- Revised and expanded version of the original D&D.\n- Introduction of the 20-sided dice (d20) and THAC0 (To Hit Armor Class 0).\n- Popularization of D&D through books like \"Player's Handbook,\" \"Dungeon Master's Guide,\" and \"Monster Manual.\"\n- Different classes and races."
+  },
+  {
+    "Name": "AD&D 2nd Edition (1989)",
+    "Description": "- Revisions to rules and mechanics, with an emphasis on role-playing and storytelling.\n- Introduction of Player Character (PC) kits that provided specialized options.\n- More standardized rules for various situations.\n- Settings like \"Dark Sun\" and \"Ravenloft\" released."
+  },
+  {
+    "Name": "D&D 3rd Edition (2000)",
+    "Description": "- Major overhaul with a focus on streamlining rules and introducing a d20-based system.\n- Introduction of the Open Game License (OGL), allowing third-party publishers to create content.\n- Character customization through the \"d20 System\" with feats and prestige classes."
+  },
+  {
+    "Name": "D&D 3.5 Edition (2003)",
+    "Description": "- Revised version of D&D 3rd Edition with clarifications and improvements.\n- Balanced and expanded rules for more enjoyable gameplay.\n- New content released under the OGL.\n- The launch of the \"Dungeons & Dragons Miniatures Game\" supplement."
+  },
+  {
+    "Name": "D&D 4th Edition (2008)",
+    "Description": "- Significant changes to gameplay, with a focus on tactical combat and powers.\n- Introduction of \"At-Will,\" \"Encounter,\" and \"Daily\" powers for classes.\n- Dividing classes into roles: Defender, Striker, Controller, and Leader.\n- Online tools for character management."
+  },
+  {
+    "Name": "D&D 5th Edition (2014)",
+    "Description": "- Return to a more simplified and accessible rule set while maintaining depth.\n- Advantage/Disadvantage mechanic for streamlined gameplay.\n- Emphasis on storytelling and role-playing.\n- Regular release of adventure modules.\n- Broad appeal, leading to increased popularity."
+  }
+]

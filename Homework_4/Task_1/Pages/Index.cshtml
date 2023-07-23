@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Task 1";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Задание 1</h1>
+    <br/>
+    <br/>
+    <h4 class="task">
+        Выведите: номер текущего дня в году, а также
+        информацию о том, какой сейчас год, с указанием, он
+        высокосный или нет.
+    </h4>
+    <br/>
+    <br/>
+    <h2 class="display-4">Решение</h2>
+    <br/>
+    <br/>
+    <h3>Current Day of the year:@Model.CurrentDayOfYear</h3>
+    <h3>This year 
+        @if (Model.IsLeapYear)
+        {
+            <span>is </span>
+        }
+        else
+        {
+            <span>isn't </span>
+        }
+        a leap year
+    </h3>
+</div>

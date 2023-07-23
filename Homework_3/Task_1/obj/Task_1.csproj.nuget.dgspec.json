@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Homework_3\\Task_1\\Task_1.csproj": {}
+    "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Task_1\\Task_1.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Homework_3\\Task_1\\Task_1.csproj": {
+    "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Task_1\\Task_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Homework_3\\Task_1\\Task_1.csproj",
+        "projectUniqueName": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Task_1\\Task_1.csproj",
         "projectName": "Task_1",
-        "projectPath": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Homework_3\\Task_1\\Task_1.csproj",
+        "projectPath": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Task_1\\Task_1.csproj",
         "packagesPath": "C:\\Users\\Artem\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Homework_3\\Task_1\\obj\\",
+        "outputPath": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Task_1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Artem\\AppData\\Roaming\\NuGet\\NuGet.Config",

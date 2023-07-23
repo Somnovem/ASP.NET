@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/hShyrEWwA1t7rS1It33WcmNwJRqnJg3cmWax3+GOBQ=",
+  "Hash": "GOkx5jSsnRMoFz8wbEDKkWs3Ig9BQjTYjcn6Przs25U=",
   "Source": "Task_1",
   "BasePath": "_content/Task_1",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Task_1\\wwwroot",
       "Source": "Task_1",
-      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Homework_3\\Task_1\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Task_1\\wwwroot\\",
       "BasePath": "_content/Task_1",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Homework_3\\Task_1\\wwwroot\\css\\style.css",
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Task_1\\wwwroot\\css\\style.css",
       "SourceId": "Task_1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Homework_3\\Task_1\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Task_1\\wwwroot\\",
       "BasePath": "_content/Task_1",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
-      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Homework_3\\Task_1\\wwwroot\\js\\script.js",
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Task_1\\wwwroot\\js\\script.js",
       "SourceId": "Task_1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Homework_3\\Task_1\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_3\\Task_1\\wwwroot\\",
       "BasePath": "_content/Task_1",
       "RelativePath": "js/script.js",
       "AssetKind": "All",

@@ -1,0 +1,38 @@
+﻿@page "{id}"
+@model Task_1.Pages.DetailsModel
+@{
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex">
+                        <div class="book-image mr-4">
+                            <img src=@Model.Details.ImageLinks["thumbnail"]
+                                 alt=@Model.Details.Title>
+                        </div>
+                        <div class="book-details">
+                            <h2 class="card-title">@Model.Details.Title</h2>
+                            <p class="card-text"><strong>Author(s): </strong> @Model.Details.Authors.ConcatenateWithSeparator(", ")</p>
+                            <p class="card-text"><strong>Publisher: </strong> @Model.Details.Publisher</p>
+                            <p class="card-text"><strong>Published Date: </strong> @Model.Details.PublishedDate</p>
+                            <p class="card-text"><strong>Categories: </strong> @Model.Details.Categories.ConcatenateWithSeparator(", ")</p>
+                            <p class="card-text"><strong>Page Count: </strong> @Model.Details.PageCount</p>
+                            <p class="card-text"><strong>Average Rating: </strong>@Model.Details.AverageRating</p>
+                            <p class="card-text">
+                                <strong>Description:</strong> @Model.Details.Description
+                            </p>
+                            <div class="d-flex justify-content-between mt-4">
+                                <a href="http://books.google.com.ua/books?id=GWorEAAAQBAJ&printsec=frontcover&dq=Lotr&hl=&cd=1&source=gbs_api"
+                                   target="_blank" class="btn btn-primary">Preview</a>
+                                <a asp-page="Index" class="btn btn-secondary">Back to Search</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

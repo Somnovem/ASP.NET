@@ -1,0 +1,29 @@
+﻿@page
+@model Task_2.Pages.EditionsModel
+@{
+	ViewData["Title"] = "Editions";
+}
+
+<h1 class="display-4 container-header">All Major Editions So Far</h1>
+
+<table class="table table-dark table-striped table-hover align-middle table-bordered" id="editions-table">
+	<tr id="editions-table-header">
+		<th>Edition</th>
+		<th>What brought to the table?</th>
+	</tr>
+	@foreach (var edition in Model.Editions)
+	{
+		<tr class="editions-table-item">
+			<td class="editions-table-item-name">@edition.Name</td>
+			<td>
+				<ul style="list-style:none;">
+					@foreach (var key in @edition.Description.Split('\n'))
+					{
+						<li>@key</li>	
+					}
+				</ul>
+			</td>
+		</tr>
+	}
+
+</table>

@@ -1,0 +1,8 @@
+D:\Projects\ASP.NET_Learning\ASP.NET\Homework_4\Task_2\obj\Release\net7.0\PubTmp\Out\Task_2.exe
+D:\Projects\ASP.NET_Learning\ASP.NET\Homework_4\Task_2\obj\Release\net7.0\PubTmp\Out\appsettings.Development.json
+D:\Projects\ASP.NET_Learning\ASP.NET\Homework_4\Task_2\obj\Release\net7.0\PubTmp\Out\appsettings.json
+D:\Projects\ASP.NET_Learning\ASP.NET\Homework_4\Task_2\obj\Release\net7.0\PubTmp\Out\Task_2.dll
+D:\Projects\ASP.NET_Learning\ASP.NET\Homework_4\Task_2\obj\Release\net7.0\PubTmp\Out\Task_2.deps.json
+D:\Projects\ASP.NET_Learning\ASP.NET\Homework_4\Task_2\obj\Release\net7.0\PubTmp\Out\Task_2.runtimeconfig.json
+D:\Projects\ASP.NET_Learning\ASP.NET\Homework_4\Task_2\obj\Release\net7.0\PubTmp\Out\Task_2.pdb
+D:\Projects\ASP.NET_Learning\ASP.NET\Homework_4\Task_2\obj\Release\net7.0\PubTmp\Out\Newtonsoft.Json.dll
