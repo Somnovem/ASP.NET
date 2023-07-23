@@ -33,7 +33,6 @@ function displayResults(books) {
         const title = book.title;
         const authors = book.authors.join(", ");
         const categories = book.categories.join(", ");
-        const previewLink = book.previewLink;
         const smallThumbnail = book.smallThumbnail;
         const publisher = book.publisher;
         const publishedDate = book.publishedDate;
@@ -46,8 +45,7 @@ function displayResults(books) {
                           <p class="book-info"><strong>Categories: </strong>${categories}</p>
                           <p class="book-info"><strong>Published By: </strong>${publisher}</p>
                           <p class="book-info"><strong>Published Date: </strong>${publishedDate}</p>
-                          <div class="mt-3 d-flex justify-content-between">
-                            <a class="btn btn-primary" href="${previewLink}" target="_blank">Preview</a>
+                          <div class="mt-3">
                             <a class="btn btn-secondary" href="details/${id}">More Details</a>
                           </div>`;
 

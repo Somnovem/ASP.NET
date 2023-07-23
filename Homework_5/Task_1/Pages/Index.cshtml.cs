@@ -48,7 +48,6 @@ namespace Task_1.Pages
                             PublishedDate = item.VolumeInfo.PublishedDate,
                             Authors = item.VolumeInfo.Authors ?? new List<string> { "Unknown Author" },
                             Categories = item.VolumeInfo.Categories ?? new List<string> { "No category listed" },
-                            PreviewLink = item.VolumeInfo.PreviewLink,
                             SmallThumbnail = item.VolumeInfo.ImageLinks?.ContainsKey("smallThumbnail") == true ?
                                 item.VolumeInfo.ImageLinks["smallThumbnail"] : null
                         };
@@ -70,7 +69,6 @@ namespace Task_1.Pages
         public string Publisher { get; set; }
         public string PublishedDate { get; set; }
         public List<string> Categories { get; set; }
-        public string PreviewLink { get; set; }
         public string SmallThumbnail { get; set; }
     }
 
@@ -94,6 +92,5 @@ namespace Task_1.Pages
         public string PublishedDate { get; set; }
         public List<string> Categories { get; set; }
         public Dictionary<string, string> ImageLinks { get; set; }
-        public string PreviewLink { get; set; }
     }
 }
