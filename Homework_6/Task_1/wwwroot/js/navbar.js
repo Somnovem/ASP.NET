@@ -27,6 +27,7 @@ function offsetMenuBorder(element, menuBorder) {
 var pageIndex = -1;
 if (document.title == 'Home') pageIndex = 0;
 else if (document.title == 'Store') pageIndex = 1;
+else if (document.title == 'Details') pageIndex = 1;
 else if (document.title == 'Message') pageIndex = 2;
 else if (document.title == 'Authorise') pageIndex = 3;
 

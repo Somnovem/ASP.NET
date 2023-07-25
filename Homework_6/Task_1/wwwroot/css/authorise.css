@@ -190,3 +190,11 @@ h2 {
 .sign-link p a:hover {
   text-decoration: underline;
 }
+
+.valid {
+  border: 2px solid lawngreen !important;
+}
+
+.invalid {
+  border: 2px solid crimson !important;
+}

@@ -7,11 +7,10 @@ namespace Task_1.Models
         public DbSet<Manager> Managers { get; set; } = null!;
         public DbSet<Product> Products { get; set; } = null!;
         public DbSet<UserMessage> UserMessages { get; set; } = null!;
-        public DbSet<ProductFeedback> ProductFeedbacks { get; set; } = null!;
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
         {
-            Database.EnsureCreated();   // создаем базу данных при первом обращении
+            Database.EnsureCreated();
         }
     }
 }

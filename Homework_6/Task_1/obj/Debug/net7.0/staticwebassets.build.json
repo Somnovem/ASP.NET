@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gp9Thc4JILYryHzumsbmtwzq9SDthnLC76kAQAh3qjI=",
+  "Hash": "HK1PEUgOiVk4fElZFS2j9afGB/FXqnMFmDdmvGi2YL0=",
   "Source": "Task_1",
   "BasePath": "_content/Task_1",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\authorise.css"
+    },
+    {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_6\\Task_1\\wwwroot\\css\\messages.css",
+      "SourceId": "Task_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_6\\Task_1\\wwwroot\\",
+      "BasePath": "_content/Task_1",
+      "RelativePath": "css/messages.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\messages.css"
     },
     {
       "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_6\\Task_1\\wwwroot\\css\\navbar.css",
@@ -151,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\authorise.js"
+    },
+    {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_6\\Task_1\\wwwroot\\js\\messages.js",
+      "SourceId": "Task_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_6\\Task_1\\wwwroot\\",
+      "BasePath": "_content/Task_1",
+      "RelativePath": "js/messages.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\messages.js"
     },
     {
       "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_6\\Task_1\\wwwroot\\js\\navbar.js",

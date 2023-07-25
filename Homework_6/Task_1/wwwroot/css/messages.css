@@ -1,0 +1,24 @@
+﻿#message-form {
+    margin: 0 auto;
+    position: fixed;
+    bottom: 7vw;
+    width: 60vw;
+}
+
+#message-text {
+    resize: vertical;
+}
+
+#message-counter {
+    color: #000;
+}
+
+.success-message {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    display: none;
+}
