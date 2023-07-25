@@ -51,7 +51,7 @@ namespace Task_1.Pages
         }
         public async Task<IActionResult> OnPostRegisterAsync(string username, string email,string password,string gender,DateTime birthday)
         {
-            var user = context.Users.Where(user => user.Username == username).ToList();
+            var user = context.Users.Where(user => user.Username == username || user.Email == email).ToList();
             if (user.Count != 0) return Page();
 
             User newUser = new User() {Username = username, Email = email, Password = Encrypter.CalculateSHA256(password), Gender = gender[0], BirthDate = birthday};

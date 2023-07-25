@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using Task_1.Models;
 
@@ -11,6 +12,8 @@ namespace Task_1.Pages
 
         public string Username { get; set; }
         public bool IsManager { get; set; }
+
+        public List<UserMessage> userMessages { get; set; }
 
         public MessagesModel(ApplicationContext db)
         {
@@ -25,9 +28,9 @@ namespace Task_1.Pages
                 Username = identity.FindFirst(ClaimTypes.Name)?.Value;
                 bool.TryParse(Request.Cookies["IsManager"], out bool isManagerValue);
                 IsManager = isManagerValue;
-                if (isManagerValue)
+                if (IsManager)
                 {
-                    Username += " - Manager";
+                    userMessages = context.UserMessages.AsNoTracking().ToList();
                 }
                 return Page();
             }
@@ -37,8 +40,7 @@ namespace Task_1.Pages
             }
         }
 
-        public async Task<IActionResult> OnPostAsync(string username, string message)
-        {
+        public async Task<IActionResult> OnPost(string username, string message){
             try
             {
                 context.UserMessages.Add(new UserMessage
@@ -47,11 +49,12 @@ namespace Task_1.Pages
                     MessageText = message,
                     DateSent = DateTime.Now
                 });
-                return new JsonResult(new { Success = true, Message = "Message sent successfully." });
+                context.SaveChanges();
+                return RedirectToPage("/Store");
             }
             catch
             {
-                return new JsonResult(new { Success = false, Message = "Error encountered while sending the message." });
+                return Page();
             }
         }
     }
