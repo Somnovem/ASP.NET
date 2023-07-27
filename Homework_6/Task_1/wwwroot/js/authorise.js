@@ -27,8 +27,10 @@ function checkInputWithRegex(input,regex){
     input.classList.remove('invalid');
     if(regex.test(input.value)){
         input.classList.add('valid');
+        return true;
     }
-    else input.classList.add('invalid');
+    input.classList.add('invalid');
+    return false;
 }
 
 function checkValidInput(){
@@ -42,14 +44,28 @@ function checkValidInput(){
     else regSubmit.disabled = true;
 }
 
-regUsername.addEventListener('input',()=>{checkInputWithRegex(regUsername,usernameRegex)});
-regEmail.addEventListener('input',()=>{checkInputWithRegex(regEmail,emailRegex)});
+regUsername.addEventListener('input', () => {
+    if (checkInputWithRegex(regUsername, usernameRegex))
+    {
+        regUsername.title = "";
+    }
+    else regUsername.title = "Username must contain only 8-16 english letters or digits";
+});
+
+regEmail.addEventListener('input', () => {
+    if (checkInputWithRegex(regEmail, emailRegex)) {
+        regEmail.title = "";
+    }
+    else regEmail.title = "Email must be in correct format";
+});
+
 regPass.addEventListener('input',()=>{
     regPass.classList.remove('valid');
     regPass.classList.remove('invalid');
     if(regPass.value.length < 8 || regPass.value.length > 16)
     {
         regPass.classList.add('invalid');
+        if (!regPass.title.includes("Length must be from 8 to 16 characters\n"))regPass.title += "Length must be from 8 to 16 characters\n";
         return;
     }
     var hasUppercase = false;
@@ -68,8 +84,14 @@ regPass.addEventListener('input',()=>{
           hasSpecial = true;
         }
     }
-    if(hasUppercase && hasLowercase && hasNumber && hasSpecial)regPass.classList.add('valid');
-    else regPass.classList.add('invalid');
+    if (hasUppercase && hasLowercase && hasNumber && hasSpecial) {
+        regPass.classList.add('valid');
+        regPass.title = "";
+    }
+    else {
+        regPass.classList.add('invalid');
+        if (!regPass.title.includes("Password must contain an uppercase letter, lowercase letter, a number and a special symbol[+,-,_]\n")) regPass.title += "Password must contain an uppercase letter, lowercase letter, a number and a special symbol[+,-,_]\n";
+    }
 });
 
 regBirthday.addEventListener('input',()=>{
@@ -78,8 +100,14 @@ regBirthday.addEventListener('input',()=>{
     var diffInMilliseconds = new Date() - Date.parse(regBirthday.value)
     var millisecondsInYear = 1000 * 60 * 60 * 24 * 365;
     var diffInYears = diffInMilliseconds / millisecondsInYear;
-    if(diffInYears >= 18) regBirthday.classList.add('valid');
-    else regBirthday.classList.add('invalid');
+    if (diffInYears >= 18) {
+        regBirthday.classList.add('valid');
+        regBirthday.title = "";
+    }
+    else {
+        regBirthday.classList.add('invalid');
+        regBirthday.title = "You must be at least 18 years old";
+    }
 });
 
 regUsername.addEventListener('change',checkValidInput);

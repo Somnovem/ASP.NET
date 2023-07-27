@@ -140,20 +140,6 @@ h2 {
   background: #fff;
 }
 
-.forgot-pass {
-  margin: -15px 0 15px;
-}
-
-.forgot-pass a {
-  color: #333;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.forgot-pass a:hover {
-  text-decoration: underline;
-}
-
 .btn {
   position: relative;
   top: 0;
