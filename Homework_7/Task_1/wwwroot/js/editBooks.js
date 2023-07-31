@@ -26,66 +26,18 @@ function editBook(bookId) {
         document.getElementById("publisher").value = book.Publisher;
         document.getElementById("publishedDate").value = book.PublishedDate;
         document.getElementById("categories").value = book.Categories;
+        document.getElementById("authors").value = book.Authors;
     }
 }
 
-// Function to save edited book or add a new book
-//async function saveBook() {
-//    const bookId = document.getElementById("bookId").value;
-//    const title = document.getElementById("title").value;
-//    const description = document.getElementById("description").value;
-//    const pageCount = parseInt(document.getElementById("pageCount").value);
-//    const rating = parseFloat(document.getElementById("rating").value);
-//    const ratingsCount = parseInt(document.getElementById("ratingsCount").value);
-//    const publisher = document.getElementById("publisher").value;
-//    const publishedDate = document.getElementById("publishedDate").value;
-//    const categories = document.getElementById("categories").value;
+function deleteBook(id) {
 
-//    const response = await fetch("/EditBooks?handler=EditBook", {
-//        method: "PUT",
-//        headers: { "Accept": "application/json", "Content-Type": "application/json" },
-//        body: JSON.stringify({
-//            id: parseInt(bookId, 10), // Ensure id is parsed as an integer
-//            title: title,
-//            description: description,
-//            publisher: publisher,
-//            publishedDate: publishedDate,
-//            categories: categories,
-//            rating: parseFloat(rating),
-//            pageCount: parseInt(pageCount, 10),
-//            ratingsCount: parseInt(ratingsCount, 10)
-//        })
-//    });
-
-//    console.dir(response);
-
-//    // Process the response if needed
-//    const result = await response.json();
-//    console.log(result);
-
-//    document.getElementById("bookId").value = "";
-//    document.getElementById("bookForm").reset();
-//}
-
-
-function addNewBook() {
-    if (document.getElementById("bookId").value != "") saveBook();
-    else
+    if (window.confirm('Do you really wanna delete this book?'))
     {
-        const title = document.getElementById("title").value;
-        const description = document.getElementById("description").value;
-        const pageCount = parseInt(document.getElementById("pageCount").value);
-        const rating = parseFloat(document.getElementById("rating").value);
-        const ratingsCount = parseInt(document.getElementById("ratingsCount").value);
-        const publisher = document.getElementById("publisher").value;
-        const publishedDate = document.getElementById("publishedDate").value;
-        const categories = document.getElementById("categories").value;
-
-        document.getElementById("bookForm").reset();
+        var jsonDataUrl = `?handler=Delete&id=${id}`;
+        fetch(jsonDataUrl).then(() => {
+            window.location.reload();
+        }
+        );
     }
-}
-
-function deleteBook(bookId)
-{
-
 }
