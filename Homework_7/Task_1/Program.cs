@@ -7,6 +7,12 @@ string connection = builder.Configuration.GetConnectionString("DefaultConnection
 
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection));
 
+builder.Services.AddAuthentication("LibraryAuthScheme")
+	   .AddCookie("LibraryAuthScheme", options => {
+		   options.Cookie.Name = "LibraryCookie";
+		   options.ExpireTimeSpan = TimeSpan.FromDays(14);
+	   });
+
 // Add services to the container.
 builder.Services.AddRazorPages();
 
@@ -25,6 +31,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();

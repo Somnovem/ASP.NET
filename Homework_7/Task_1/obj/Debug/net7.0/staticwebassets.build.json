@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iA/S5LDZ2sbWHfiGQYmkaeFhPAIT8/uyOYXnzEAbI2M=",
+  "Hash": "JkX2LuvztmXxq1IY/dxSNSGT16BuLeDMUBa/csDqEt0=",
   "Source": "Task_1",
   "BasePath": "_content/Task_1",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Task_1.bundle.scp.css"
     },
     {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\css\\books.css",
+      "SourceId": "Task_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\",
+      "BasePath": "_content/Task_1",
+      "RelativePath": "css/books.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\books.css"
+    },
+    {
       "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\css\\index.css",
       "SourceId": "Task_1",
       "SourceType": "Discovered",
@@ -66,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\index.css"
+    },
+    {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\css\\navbar.css",
+      "SourceId": "Task_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\",
+      "BasePath": "_content/Task_1",
+      "RelativePath": "css/navbar.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\navbar.css"
     },
     {
       "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\css\\site.css",
@@ -85,6 +119,23 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\css\\users.css",
+      "SourceId": "Task_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\",
+      "BasePath": "_content/Task_1",
+      "RelativePath": "css/users.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\users.css"
+    },
+    {
       "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\favicon.ico",
       "SourceId": "Task_1",
       "SourceType": "Discovered",
@@ -102,6 +153,40 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\js\\books.js",
+      "SourceId": "Task_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\",
+      "BasePath": "_content/Task_1",
+      "RelativePath": "js/books.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\books.js"
+    },
+    {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\js\\editBooks.js",
+      "SourceId": "Task_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\",
+      "BasePath": "_content/Task_1",
+      "RelativePath": "js/editBooks.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\editBooks.js"
+    },
+    {
       "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\js\\site.js",
       "SourceId": "Task_1",
       "SourceType": "Discovered",
@@ -117,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\js\\users.js",
+      "SourceId": "Task_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\",
+      "BasePath": "_content/Task_1",
+      "RelativePath": "js/users.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\users.js"
     },
     {
       "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_7\\Task_1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

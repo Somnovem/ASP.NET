@@ -3,12 +3,15 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Task_1.Models;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System.Linq;
+
 namespace Task_1.Pages
 {
     public class BooksModel : PageModel
     {
         ApplicationContext context;
         public List<Book> Books { get; private set; } = new();
+        public List<string> Categories { get; private set; } = new();
         public BooksModel(ApplicationContext db)
         {
             context = db;
@@ -32,15 +35,17 @@ namespace Task_1.Pages
                     var searchResults = JsonConvert.DeserializeObject<GoogleBooksResponse>(json);
                     if (searchResults?.Items != null)
                     {
-                        int bookId = 1;
                         foreach (var item in searchResults.Items)
                         {
                             var book = new Book
                             {
                                 Title = item.VolumeInfo.Title,
                                 Publisher = item.VolumeInfo.Publisher,
+                                PublishedDate = item.VolumeInfo.PublishedDate,
                                 Description = item.VolumeInfo.Description,
                                 PageCount = item.VolumeInfo.PageCount,
+                                AverageRating = item.VolumeInfo.AverageRating,
+                                RatingsCount = item.VolumeInfo.RatingsCount,
                                 Authors = item.VolumeInfo.Authors.ConcatenateWithSeparator(", "),
                                 Categories = item.VolumeInfo.Categories.ConcatenateWithSeparator(", "),
                                 ThumbnailLink = item.VolumeInfo.ImageLinks?.ContainsKey("smallThumbnail") == true ?
@@ -53,11 +58,26 @@ namespace Task_1.Pages
 					}
                 }
             }
-            return Page();
+			for (int i = 0; i < Books.Count; i++)
+			{
+                var splitCategories = Books[i].Categories.Split(", ");
+                for (int j = 0; j < splitCategories.Length; j++)
+                {
+					if (Categories.Contains(splitCategories[j])) continue;
+					Categories.Add(splitCategories[j]);
+				}
+			}
+			return Page();
         }
-    }
 
-    public class GoogleBooksResponse
+		public IActionResult OnGetJsonData()
+		{
+			var jsonData = JsonConvert.SerializeObject(context.Books.AsNoTracking().ToList());
+			return new JsonResult(jsonData);
+		}
+	}
+
+    public class GoogleBooksResponse  
     {
         public List<GoogleBooksItem> Items { get; set; } 
     }
@@ -72,9 +92,12 @@ namespace Task_1.Pages
         public string Title { get; set; } 
         public List<string> Authors { get; set; }
         public string Publisher { get; set; }
+        public string PublishedDate { get; set; }
         public string Description { get; set; } 
-        public string PageCount { get; set; }
-        public List<string> Categories { get; set; } 
+        public int PageCount { get; set; }
+		public float AverageRating { get; set; }
+		public int RatingsCount { get; set; }
+		public List<string> Categories { get; set; } 
         public Dictionary<string, string> ImageLinks { get; set; } 
     }
 }

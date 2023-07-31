@@ -1,0 +1,26 @@
+﻿@page "{id}"
+@model Task_1.Pages.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-5">
+            <h1>@Model.Book.Title</h1>
+            <hr style="height:4px;border:none;color:black;background-color:black;">
+            <p>@Model.Book.Description</p>
+            <p>Publisher(s) : @Model.Book.Publisher</p>
+            <p>Publish Date) : @Model.Book.PublishedDate</p>
+            <p>Category(s) : @Model.Book.Categories</p>
+            <p>Author(s) : @Model.Book.Authors</p>
+            <p>Page Count: @Model.Book.PageCount</p> 
+            <p>Rating: @Model.Book.AverageRating</p>
+            <p>Ratings Count: @Model.Book.RatingsCount</p>
+            <a asp-page="/Books" class="btn btn-primary mt-5" style="background-color:burlywood; font-weight:600;">Go Back</a>
+        </div>
+        <div class="col-lg-7 d-flex" style="align-items:center;justify-content:center;">
+            <img src=@Model.Book.ThumbnailLink alt="Product Image" class="img-fluid" style="transform:scale(2)">
+        </div>
+    </div>
+</div>
