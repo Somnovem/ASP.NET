@@ -7,7 +7,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAS+LWmrY1gUWWXagtYNXygwAAAAACAAAAAAAQZgAAAAEAACAAAACQ4H5ytT6aeEa90ycMJ4HBvvJFh0Fy03J++jye+i2I7QAAAAAOgAAAAAIAACAAAAAsF8I8oLjUtU4blm2/oVB9F63L0hCcsvDS6rTHwztJsCAAAAC5HWxyS1g44D3noMh6NI/nzUgVm4C6RK6ZgBC5WAYffkAAAACNfQAmJ2NFL7mUq3/aUYVQaSpvaO2UzmBnJfE7lXd4akIvoGYQzegzvt4mJUbcBFIDBthKUuJuYFfQl0x4i/PJ</EncryptedPassword>
     <_PublishTargetUrl>ftp://www.testSom.somee.com/www.testSom.somee.com</_PublishTargetUrl>
-    <History>True|2023-07-21T17:40:12.0561179Z;False|2023-07-21T20:35:49.3895495+03:00;True|2023-07-21T20:28:20.1804253+03:00;False|2023-07-21T20:22:50.0042230+03:00;False|2023-07-21T20:17:50.1766989+03:00;</History>
+    <History>True|2023-07-31T15:29:34.4791590Z;True|2023-07-21T20:40:12.0561179+03:00;False|2023-07-21T20:35:49.3895495+03:00;True|2023-07-21T20:28:20.1804253+03:00;False|2023-07-21T20:22:50.0042230+03:00;False|2023-07-21T20:17:50.1766989+03:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -21,25 +21,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/08/2023 09:09:54</publishTime>
     </File>
     <File Include="Task_2.deps.json">
-      <publishTime>07/21/2023 20:36:39</publishTime>
+      <publishTime>07/31/2023 18:25:59</publishTime>
     </File>
     <File Include="Task_2.dll">
-      <publishTime>07/21/2023 20:36:39</publishTime>
+      <publishTime>07/31/2023 18:25:58</publishTime>
     </File>
     <File Include="Task_2.exe">
-      <publishTime>07/21/2023 20:36:39</publishTime>
+      <publishTime>07/31/2023 18:25:58</publishTime>
     </File>
     <File Include="Task_2.pdb">
-      <publishTime>07/21/2023 20:36:39</publishTime>
+      <publishTime>07/31/2023 18:25:58</publishTime>
     </File>
     <File Include="Task_2.runtimeconfig.json">
       <publishTime>07/21/2023 20:12:57</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>07/21/2023 20:36:40</publishTime>
+      <publishTime>07/31/2023 18:25:59</publishTime>
     </File>
     <File Include="wwwroot/css/site.css">
-      <publishTime>07/18/2023 14:44:11</publishTime>
+      <publishTime>07/23/2023 14:34:04</publishTime>
     </File>
     <File Include="wwwroot/favicon.ico">
       <publishTime>07/16/2023 14:46:14</publishTime>

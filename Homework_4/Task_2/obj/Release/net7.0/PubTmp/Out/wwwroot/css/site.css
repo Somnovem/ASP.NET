@@ -127,7 +127,7 @@ body{
   width: 100%;
   background-color: rgb(223, 223, 215);
   padding:10px 30px;
-  border-radius: 5px 15% 5px 15%;
+  border-radius: 5px 5px 5px 10%;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);

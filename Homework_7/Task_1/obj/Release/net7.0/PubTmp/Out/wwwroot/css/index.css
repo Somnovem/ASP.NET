@@ -1,0 +1,74 @@
+﻿body {
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.shutterstock.com%2Fblog%2Fwp-content%2Fuploads%2Fsites%2F5%2F2016%2F09%2Fgeorge-peabody-library-1.jpg&f=1&nofb=1&ipt=b540ee95c0a658ccfe2e1279d8825424cdecedd511de040e05202b879462220d&ipo=images);
+  background-size: cover;
+}
+
+#index-container {
+  margin-top: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+#index-container > h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  font-family: Great Vibes;
+  text-shadow: 14px 14px 8px black;
+}
+
+#index-container > p {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: Lugrasimo;
+  text-shadow: 6px 6px 2px black;
+}
+
+.index-btn-dive {
+  appearance: none;
+  background-color: white;
+  border: 2px solid #1a1a1a;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3b3b3b;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 30px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.index-btn-dive:disabled {
+  pointer-events: none;
+}
+
+.index-btn-dive:hover {
+  color: #fff;
+  background-color: #1a1a1a;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.index-btn-dive:active {
+  box-shadow: none;
+  transform: translateY(0);
+}

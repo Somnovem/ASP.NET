@@ -1,0 +1,133 @@
+﻿html {
+  font-size: 14px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+a {
+    color: #0077cc;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+body {
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2019%2F09%2F821112-dungeons-dragons-forgotten-realms-magic-rpg-action-adventure-puzzle-fantasy-warrior-dragon.jpg&f=1&nofb=1&ipt=b96ac3b942b67e24a1f1cbc4c3695463bbdbbb7d01a1bab5d4e35de1aa00247d&ipo=images);
+  background-size: cover;
+}
+
+.container-header {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.nav-container {
+  background-color: #212121;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px;
+}
+
+.navigation {
+  margin: 0;
+  padding: 5px;
+}
+
+.navigation__link {
+  position: relative;
+  display: block;
+  font-weight: 900;
+  font-size: 24px;
+  text-decoration: none;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.navigation__link:hover {
+  color: #fff;
+  -webkit-text-stroke: 1px #212121;
+  transition: 0.25s;
+}
+
+.navigation__link:hover::before {
+  transform: translate(6px, -3px);
+  color: #ff1744;
+  -webkit-text-stroke: 1px #212121;
+}
+
+.navigation__link:hover::after {
+  transform: translate(12px, -6px);
+  color: #4dd0e1;
+  -webkit-text-stroke: 1px #212121;
+}
+
+.navigation__link:hover::before,
+.navigation__link:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px transparent;
+}

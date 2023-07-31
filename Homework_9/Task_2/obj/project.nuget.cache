@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "fuPNiIXz0RyLDR2MD6QJpgD2g8teNSmerMwCI+dBAy9mdLESldEXnIAsrgNkehfAsJW66dowF02zZMQqmtzSuw==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_9\\Task_2\\Task_2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Artem\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
