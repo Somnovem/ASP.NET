@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Ubuntu Review";
+}
+
+<style>
+    .email-input.invalid {
+        border-color: red;
+    }
+</style>
+
+<div class="container mt-5">
+    <h2>Leave a Review</h2>
+    <form id="reviewForm" method="post">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="firstname" class="form-label">First Name (optional)</label>
+            <input type="text" class="form-control" id="firstname" name="firstname">
+        </div>
+        <div class="mb-3">
+            <label for="review" class="form-label">Review</label>
+            <textarea class="form-control" id="review" name="review" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitButton" disabled>Submit</button>
+    </form>
+</div>
+
+<script src="~/js/review.js"></script>

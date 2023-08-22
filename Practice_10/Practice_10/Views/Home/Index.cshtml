@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Ubuntu Info Project";
+}
+
+<link rel="stylesheet" href="~/css/index.css" />
+
+<div id="wrapper">
+    <div class="container-index">
+        <div id="left-col">
+            <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo-ubuntu_cof-orange-hex.svg" alt="Ubuntu Logo">
+            <h1>@ViewData["Welcome Message"]</h1>
+            <p>@ViewBag.WelcomeDescr</p>
+            <button id="details-button">View Details</button>
+        </div>
+        <div id="right-col">
+            <div id="screenshot">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F149366088.v2.pressablecdn.com%2Fwp-content%2Fuploads%2F2021%2F04%2Fubuntu-21.04-desktop.jpg&f=1&nofb=1&ipt=d176b626feba8c8328a07be2560199872d43267d76e3887f5397a8d0a3b1f86b&ipo=images" alt="Ubuntu Screenshot">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const title = document.querySelector('h1');
+            const paragraph = document.querySelector('p');
+            title.style.transform = 'translateX(0)';
+            title.style.opacity = 1;
+
+            paragraph.style.transform = 'translateX(0)';
+            paragraph.style.opacity = 1;
+        }, 1000);
+    });
+</script>

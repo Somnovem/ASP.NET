@@ -1,0 +1,66 @@
+{
+  "version": "22.04",
+  "changes": [
+    {
+      "achievement": "Linux 5.15 kernel",
+      "subachievements": []
+    },
+    {
+      "achievement": "New Ubuntu theme with accent colors, improved integration for snaps and system-wide dark style preference support",
+      "subachievements": []
+    },
+    {
+      "achievement": "GNOME Shell and most GNOME libraries updated to the 42 release",
+      "subachievements": [
+        "Streamlined user interface and workspace transitions",
+        "Compact and modern on-screen display notifications",
+        "New screenshot/screen recording interface",
+        "New power profile selection",
+        "Improved multi-monitor support"
+      ]
+    },
+    {
+      "achievement": "GNOME desktop performance improvements",
+      "subachievements": [
+        "Up to 2x improvement in frame rates with Intel and Raspberry Pi graphics drivers",
+        "Significant improvements for AMD and NVIDIA"
+      ]
+    },
+    {
+      "achievement": "Wayland as the default display server for most systems whilst X11 remains the default for those with an NVIDIA discrete GPU",
+      "subachievements": []
+    },
+    {
+      "achievement": "Latest PulseAudio support for LDAC and AptX bluetooth codecs, HFP bluetooth profiles and bluetooth device battery level reporting",
+      "subachievements": []
+    },
+    {
+      "achievement": "Up-to-date toolchains, including Python 3.10, PHP 8.1, Ruby 3.0, Perl 5.34, Go 1.18, GCC 11.2, Rust 1.58.1",
+      "subachievements": []
+    },
+    {
+      "achievement": "Core productivity apps LibreOffice 7.3.2, Thunderbird 91.8, and Firefox 99 which is now included as a snap",
+      "subachievements": []
+    },
+    {
+      "achievement": "Active Directory integration with the Ubuntu installer",
+      "subachievements": []
+    },
+    {
+      "achievement": "Policy-based administration using Microsoft Active Directory Group Policy (GPO) and advanced policy support for Ubuntu Pro Desktop users",
+      "subachievements": []
+    },
+    {
+      "achievement": "Raspberry Pi 4 2GB Desktop support as a result of various performance improvements",
+      "subachievements": []
+    },
+    {
+      "achievement": "Better power management for NVIDIA dGPUs",
+      "subachievements": []
+    },
+    {
+      "achievement": "Wifi 6E support",
+      "subachievements": []
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+﻿@model Practice_10.Models.VersionViewModel
+
+<link rel="stylesheet" href="~/css/release.css" />
+
+<section class="p-strip--suru">
+    <div class="row">
+        <div class="col-8">
+            <h2 id="whats-new-text">What’s new in Ubuntu @Model.Version</h2>
+        </div>
+    </div>
+    <div class="column-container">
+        <ul class="p-list is-split">
+            @for (int i = 0; i < Model.Changes.Count / 2; i++)
+            {
+                var change = Model.Changes[i];
+                <li class="p-list__item is-ticked">
+                    @change.Achievement
+                    @if (@change.SubAchievements.Count != 0)
+                    {
+                        <ul>
+                            @foreach (var item in @change.SubAchievements)
+                            {
+                                <li>
+                                    @item
+                                </li>
+                            }
+                        </ul>
+                    }
+                </li>
+            }
+        </ul>
+        <ul class="p-list is-split">
+            @for (int i = Model.Changes.Count / 2; i < Model.Changes.Count; i++)
+            {
+                var change = Model.Changes[i];
+                <li class="p-list__item is-ticked">
+                    @change.Achievement
+                    @if (@change.SubAchievements.Count != 0)
+                    {
+                        <ul>
+                            @foreach (var item in @change.SubAchievements)
+                            {
+                                <li>
+                                    @item
+                                </li>
+                            }
+                        </ul>
+                    }
+                </li>
+            }
+        </ul>
+    </div>
+    <div>
+        <p>
+            <a href="https://discourse.ubuntu.com/t/jammy-jellyfish-release-notes/24668">
+                Read the full release notes&nbsp;›
+            </a>
+        </p>
+    </div>
+</section>
