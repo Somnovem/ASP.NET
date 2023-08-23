@@ -1,0 +1,52 @@
+﻿@model Task_1.ViewModels.StoreViewModel
+
+@{
+    ViewData["Title"] = "Store";
+}
+
+<link rel="stylesheet" href="~/css/store.css" />
+
+<div class="container">
+    <div class="container mt-4" style="margin:5% 0;">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search items" id="searchInput">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <select class="form-control" id="categorySelect">
+                    <option value="" selected>Select a category</option>
+                    @foreach (var category in Model.Categories)
+                    {
+                        <option value=@category>@category</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-9">
+                <!-- Empty column to push sorting-block to the right -->
+            </div>
+            <div class="col-md-3 d-flex">
+                <div class="input-group" style="margin-right:30px;">
+                    <select class="form-control" id="sortingSelect">
+                        <option value="Price">Sort by Price</option>
+                        <option value="Rating">Sort by Rating</option>
+                        <option value="DiscountPercentage">Sort by Discount</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <button id="sortPropertyAsc" class="btn btn-outline-secondary" type="button">Asc</button>
+                    <button id="sortPropertyDesc" class="btn btn-outline-secondary" type="button">Desc</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.CreateStoreList(Model.Products.ToArray());
+</div>
+
+<script src="~/js/store.js" asp-append-version="true"></script>

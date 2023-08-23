@@ -1,0 +1,48 @@
+﻿@model Task_1.ViewModels.ReviewsViewModel
+
+@{
+    ViewData["Title"] = "Lorem Reviews";
+}
+
+@if (Model.IsManager)
+{
+    <div class="container mt-5">
+        <h1 class="display-4">User messages</h1>
+        <div class="row" id="feedbackContainer">
+            @foreach (var userMessage in Model.UserMessages)
+            {
+                <div class="card mb-4" style="width: 100%; border:2px solid black; border-radius:15px; margin:15px 5px;">
+                    <div class="card-body">
+                        <p class="card-text">User Id: @userMessage.UserId</p>
+                        <p class="card-text">Message: @userMessage.MessageText</p>
+                        <p class="card-text">Date: @userMessage.DateSent</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+else
+{
+    <link rel="stylesheet" href="~/css/messages.css" asp-append-version="true">
+    <div class="container">
+        @using (Html.BeginForm("Reviews", "Home", FormMethod.Post))
+        {
+            <div id="message-form">
+                <div class="form-group">
+                    <div id="message-counter">Characters left: 3000</div>
+                    <label for="message-text">Leave a message:</label>
+                    <textarea class="form-control" id="message-text" rows="5" maxlength="3000" name="message"></textarea>
+                    <input id="usernameSpan" name="username" value=@Model.Username style="display:none">
+                </div>
+                <div class="form-group d-flex flex-row-reverse mt-3">
+                    <button type="submit" class="btn btn-primary" id="send-button" disabled>Send</button>
+                </div>
+            </div>
+        }
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="~/js/messages.js" asp-append-version="true"></script>
+}

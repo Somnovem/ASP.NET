@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Task_1.Models;
 using Newtonsoft.Json;
-using static System.Reflection.Metadata.BlobBuilder;
 
 namespace Task_1.Pages
 {

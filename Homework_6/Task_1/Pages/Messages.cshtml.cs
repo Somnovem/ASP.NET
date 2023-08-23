@@ -58,10 +58,4 @@ namespace Task_1.Pages
             }
         }
     }
-
-    public class MessageData
-    {
-        public string Username { get; set; }
-        public string Message { get; set; }
-    }
 }
