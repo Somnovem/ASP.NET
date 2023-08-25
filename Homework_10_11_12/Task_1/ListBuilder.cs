@@ -6,7 +6,7 @@ using Task_1.Models;
 
 namespace Task_1
 {
-    public static class ListHelper
+    public static class ListBuilder
     {
         public static HtmlString CreateStoreList(this IHtmlHelper html, Product[] products)
         {

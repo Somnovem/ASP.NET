@@ -6,26 +6,20 @@
 
 @if (Model.IsManager)
 {
-    <div class="container mt-5">
-        <h1 class="display-4">User messages</h1>
+    <container class="mt-5">
+        <main-text>User messages</main-text>
         <div class="row" id="feedbackContainer">
             @foreach (var userMessage in Model.UserMessages)
             {
-                <div class="card mb-4" style="width: 100%; border:2px solid black; border-radius:15px; margin:15px 5px;">
-                    <div class="card-body">
-                        <p class="card-text">User Id: @userMessage.UserId</p>
-                        <p class="card-text">Message: @userMessage.MessageText</p>
-                        <p class="card-text">Date: @userMessage.DateSent</p>
-                    </div>
-                </div>
+                <review user-id=@userMessage.UserId message=@userMessage.MessageText date=@userMessage.DateSent />
             }
         </div>
-    </div>
+    </container>
 }
 else
 {
     <link rel="stylesheet" href="~/css/messages.css" asp-append-version="true">
-    <div class="container">
+    <container>
         @using (Html.BeginForm("Reviews", "Home", FormMethod.Post))
         {
             <div id="message-form">
@@ -40,7 +34,7 @@ else
                 </div>
             </div>
         }
-    </div>
+    </container>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
