@@ -2,12 +2,18 @@
     ViewData["Title"] = "Lorem Store";
 }
 <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/date.css" asp-append-version="true" />
 
 <container class="mt-5">
     <div class="text-center d-flex">
-        <div style="flex: 60%; text-align: left; display:flex; flex-direction:column; align-items:start; justify-content:center;">
-            <main-text>Welcome to Lorem Store!</main-text>
-            <h3>Get ready to explore a wide range of products!</h3>
+        <div style="flex: 60%; text-align: left; display:flex; flex-direction:column; align-items:start; justify-content:center">
+            <main-text>
+                @await Component.InvokeAsync("Greeting")
+            </main-text>
+            @await Component.InvokeAsync("Date")
+            <h3>
+                @await Component.InvokeAsync("Slogan")
+            </h3>
             <a asp-area="" asp-controller="Home" asp-action="Store" class="home-btn-shop">Go Shopping</a>
         </div>
         <div style="flex: 40%; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); border-radius: 10px; overflow: hidden;">
@@ -15,3 +21,5 @@
         </div>
     </div>
 </container>
+
+<script src="~/js/date.js" asp-append-version="true"></script>

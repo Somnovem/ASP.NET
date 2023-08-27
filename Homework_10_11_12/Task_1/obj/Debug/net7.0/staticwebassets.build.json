@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0MWwctxkfPoiIRxz9TVmBVWvQZfV/kHROTEIPvT0z2M=",
+  "Hash": "B295GlNCouPpoen9No3xXY+czCEFNRz84sC6fhqAQoQ=",
   "Source": "Task_1",
   "BasePath": "_content/Task_1",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\authorise.css"
+    },
+    {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\css\\date.css",
+      "SourceId": "Task_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\",
+      "BasePath": "_content/Task_1",
+      "RelativePath": "css/date.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\date.css"
+    },
+    {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\css\\details.css",
+      "SourceId": "Task_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\",
+      "BasePath": "_content/Task_1",
+      "RelativePath": "css/details.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\details.css"
     },
     {
       "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\css\\index.css",
@@ -202,6 +236,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\authorise.js"
+    },
+    {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\js\\date.js",
+      "SourceId": "Task_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\",
+      "BasePath": "_content/Task_1",
+      "RelativePath": "js/date.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\date.js"
     },
     {
       "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\js\\messages.js",

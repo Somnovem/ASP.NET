@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\css\\authorise.css"
     },
     {
+      "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\css\\date.css",
+      "PackagePath": "staticwebassets\\css\\date.css"
+    },
+    {
+      "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\css\\details.css",
+      "PackagePath": "staticwebassets\\css\\details.css"
+    },
+    {
       "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\css\\index.css",
       "PackagePath": "staticwebassets\\css\\index.css"
     },
@@ -39,6 +47,10 @@
     {
       "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\js\\authorise.js",
       "PackagePath": "staticwebassets\\js\\authorise.js"
+    },
+    {
+      "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\js\\date.js",
+      "PackagePath": "staticwebassets\\js\\date.js"
     },
     {
       "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\js\\messages.js",

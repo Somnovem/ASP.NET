@@ -37,7 +37,7 @@ namespace Task_1
 
                 TagBuilder price = new TagBuilder("h5");
                 price.Attributes.Add("class", "card-info card-price");
-                price.InnerHtml.Append($"Price: {product.Price}");
+                price.InnerHtml.Append($"Price: ${product.Price}");
 
                 TagBuilder stock = new TagBuilder("h5");
                 stock.Attributes.Add("class", "card-info card-stock");

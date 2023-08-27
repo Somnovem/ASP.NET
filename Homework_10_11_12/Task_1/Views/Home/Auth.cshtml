@@ -1,8 +1,8 @@
-﻿@model Task_1.ViewModels.AuthViewModel
+﻿@addTagHelper *, Task_1
+@model Task_1.Models.PersonLogin
 @{
     ViewData["Title"] = "Auth Lorem";
 }
-
 
 <link rel="stylesheet" href="~/css/authorise.css">
 
@@ -13,34 +13,39 @@
 else
 {
     <div class="wrapper">
+        <container>
+            <div asp-validation-summary="All" style="color:lightcoral;font-weight:500;font-size:1.1rem;"></div>
+        </container>
         <div class="form-wrapper sign-up">
             <form method="post">
-                <input type="hidden" name="isLogin" value="false">
+                <input type="hidden" asp-for="IsLogin" value="false">
                 <h2>Sign Up</h2>
                 <input-group>
-                    <input id="registerUsername" name="username" type="text" required>
-                    <label for="registerUsername">Username</label>
+                    <input id="registerUsername" asp-for="Username" type="text" required>
+                    <label asp-for="Username">Username</label>
+                    <span asp-validation-for="Username" />
                 </input-group>
                 <input-group>
-                    <input id="registerEmail" name="email" type="email" required>
-                    <label for="registerEmail">Email</label>
+                    <input id="registerEmail" asp-for="Email" type="email" required>
+                    <label asp-for="Email">Email</label>
+                    <span asp-validation-for="Email" />
                 </input-group>
                 <input-group>
-                    <input id="registerPassword" name="password" type="password" required>
-                    <label for="registerPassword">Password</label>
+                    <input id="registerPassword" asp-for="Password" type="password" required>
+                    <label asp-for="Password">Password</label>
                 </input-group>
                 <div class="mb-3">
-                    <label for="registerGender" class="form-label">Gender</label>
-                    <select class="form-select" id="registerGender" name="gender" required>
-                        <option value="" disabled selected>Select your gender</option>
-                        <option value="M">Male</option>
-                        <option value="F">Female</option>
-                        <option value="O">Other</option>
+                    <label asp-for="Gender" class="form-label">Gender</label>
+                    <select class="form-select" id="registerGender" asp-for="Gender" required>
+                        @await Component.InvokeAsync("Option", new { value = "", disabled = true, selected = true, content = "Select your gender"})
+                        @await Component.InvokeAsync("Option", new { value = "M", content = "Male"})
+                        @await Component.InvokeAsync("Option", new { value = "F", content = "Female"})
+                        @await Component.InvokeAsync("Option", new { value = "O", content = "Other"})
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="registerBirthday" class="form-label">Birthday</label>
-                    <input type="date" class="form-control" id="registerBirthday" name="birthday" required>
+                    <label asp-for="Birthday" class="form-label">Birthday</label>
+                    <input type="date" class="form-control" id="registerBirthday" asp-for="Birthday" required>
                 </div>
                 <submit-btn id="btnRegisterSubmit" disabled>Sign Up</submit-btn>
                 <div class="sign-link" style="margin-bottom:50px;">
@@ -51,15 +56,15 @@ else
 
         <div class="form-wrapper sign-in">
             <form method="post">
-                <input type="hidden" name="isLogin" value="true">
+                <input type="hidden" asp-for="IsLogin" value="true">
                 <h2>Login</h2>
                 <input-group>
-                    <input id="loginUsername" name="username" type="text" required>
-                    <label for="loginUsername">Username</label>
+                    <input id="loginUsername" asp-for="Username" type="text" required>
+                    <label asp-for="Username">Username</label>
                 </input-group>
                 <input-group>
-                    <input id="loginPassword" name="password" type="password" required>
-                    <label for="loginPassword">Password</label>
+                    <input id="loginPassword" asp-for="Password" type="password" required>
+                    <label asp-for="Password">Password</label>
                 </input-group>
                 <submit-btn>Login</submit-btn>
                 <div class="sign-link">
@@ -68,5 +73,7 @@ else
             </form>
         </div>
     </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.10/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/js/authorise.js" asp-append-version="true"></script>
 }

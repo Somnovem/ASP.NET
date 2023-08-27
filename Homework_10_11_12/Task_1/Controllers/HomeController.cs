@@ -135,7 +135,7 @@ namespace Task_1.Controllers
         [HttpGet]
         public IActionResult Auth()
         {
-            AuthViewModel model = new AuthViewModel();
+            PersonLogin model = new PersonLogin();
             var identity = HttpContext.User.Identity as ClaimsIdentity;
             model.IsLoggedIn = (identity != null && identity.IsAuthenticated);
             model.Username = identity.FindFirst(ClaimTypes.Name)?.Value;
@@ -145,14 +145,14 @@ namespace Task_1.Controllers
         [Route("Auth")]
         [Route("Authorisation")]
         [HttpPost]
-        public async Task<IActionResult> Auth(bool isLogin,string username,string password, string? email, string? gender,DateTime? birthday)
+        public async Task<IActionResult> Auth(PersonLogin person)
         {
-            if (isLogin)
+            if (person.IsLogin)
             {
-                var user = context.Users.AsNoTracking().Where(user => user.Username == username && user.Password == Encrypter.CalculateSHA256(password)).ToList();
+                var user = context.Users.AsNoTracking().Where(user => user.Username == person.Username && user.Password == Encrypter.CalculateSHA256(person.Password)).ToList();
                 if (user.Count == 0)
                 {
-                    var manager = context.Managers.AsNoTracking().Where(manager => manager.Username == username && manager.Password == Encrypter.CalculateSHA256(password)).ToList();
+                    var manager = context.Managers.AsNoTracking().Where(manager => manager.Username == person.Username && manager.Password == Encrypter.CalculateSHA256(person.Password)).ToList();
                     if (manager.Count != 0)
                     {
                         Response.Cookies.Append("IsManager", "True");
@@ -160,22 +160,35 @@ namespace Task_1.Controllers
                     else
                     {
                         Response.Cookies.Append("IsManager", "False");
-                        return View();
+                        ModelState.AddModelError("", "No such user found or invalid password");
+                        return View(person);
                     }
                 }
             }
             else
             {
-                var user = context.Users.Where(user => user.Username == username || user.Email == email).ToList();
-                if (user.Count != 0) return View();
+                var userSameLogin = context.Users.Where(user => user.Username == person.Username).ToList();
+                var userSameEmail = context.Users.Where(user => user.Email == person.Email).ToList();
+                if (userSameLogin.Count != 0 || userSameEmail.Count != 0)
+                {
+                    if (userSameLogin.Count != 0)
+                    {
+                        ModelState.AddModelError("Username", "Username already in use");
+                    }
+                    if (userSameEmail.Count != 0)
+                    {
+                        ModelState.AddModelError("Email", "Email already in use");
+                    }
+                    return View(person);
+                }
 
-                User newUser = new User() { Username = username, Email = email, Password = Encrypter.CalculateSHA256(password), Gender = gender[0], BirthDate = birthday ?? DateTime.Now};
+                User newUser = new User() { Username = person.Username, Email = person.Email, Password = Encrypter.CalculateSHA256(person.Password), Gender = person.Gender[0], BirthDate = person.Birthday ?? DateTime.Now};
                 context.Users.Add(newUser);
                 context.SaveChanges();
             }
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, username)
+                new Claim(ClaimTypes.Name, person.Username)
             };
             var identity = new ClaimsIdentity(claims, "LoremIpsumAuthScheme");
             var principal = new ClaimsPrincipal(identity);

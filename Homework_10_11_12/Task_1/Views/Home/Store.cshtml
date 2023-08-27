@@ -34,9 +34,9 @@
             <div class="col-md-3 d-flex">
                 <input-group style="margin-right:30px;">
                     <select class="form-control" id="sortingSelect">
-                        <option value="Price">Sort by Price</option>
-                        <option value="Rating">Sort by Rating</option>
-                        <option value="DiscountPercentage">Sort by Discount</option>
+                        @await Component.InvokeAsync("Option", new { value = "Price", content = "Sort by Price"})
+                        @await Component.InvokeAsync("Option", new { value = "Rating", content = "Sort by Rating"})
+                        @await Component.InvokeAsync("Option", new { value = "DiscountPercentage", content = "Sort by Discount"})
                     </select>
                 </input-group>
                 <input-group>
