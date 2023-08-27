@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Task_1.Filters;
 using Task_1.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +16,7 @@ builder.Services.AddAuthentication("LoremIpsumAuthScheme")
 
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(options => options.Filters.Add<CustomExceptionFilterAttribute>());
 
 var app = builder.Build();
 

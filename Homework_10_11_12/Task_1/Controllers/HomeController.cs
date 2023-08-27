@@ -6,9 +6,12 @@ using System.Diagnostics;
 using System.Security.Claims;
 using Task_1.Models;
 using Task_1.ViewModels;
+using Task_1.Filters;
 
 namespace Task_1.Controllers
 {
+    [KMeleonFilter]
+    [RequestTimeFilter]
     public class HomeController : Controller
     {
         ApplicationContext context;
@@ -32,6 +35,7 @@ namespace Task_1.Controllers
         }
 
         [Route("Details/{id:int}")]
+        [IdStabilizer]
         public IActionResult Details(int id)
         {
             return View(context.Products.AsNoTracking().Where(product => product.Id == id).ToList()[0]);
@@ -39,6 +43,7 @@ namespace Task_1.Controllers
 
         [Route("Store")]
         [Route("Buy")]
+        [LastVisitResourceFilter]
         public async Task<IActionResult> Store()
         {
             StoreViewModel model = new StoreViewModel();
