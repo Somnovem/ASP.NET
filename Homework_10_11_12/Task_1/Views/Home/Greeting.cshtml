@@ -2,12 +2,71 @@
     <div class="row">
         <div class="col-lg-6 offset-lg-3">
             <main-text class="about-title">About Us</main-text>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade mt-3 mb-3" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn8.dissolve.com%2Fp%2FD430_49_206%2FD430_49_206_1200.jpg&f=1&nofb=1&ipt=1ca87d3a0d53a994e89b600d3b56bcf6666c698d2b2463c1981d6aabbc8bad00&ipo=images" class="d-block w-100" alt="Team Photo">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.exisglobal.com%2Fwp-content%2Fuploads%2F2023%2F03%2Fopen-closed-office-space-pros-cons.jpg&f=1&nofb=1&ipt=bba1869985e0ccef1c1ee0356371f413a6bd2c878f920adf7d9676d43981b6fe&ipo=images" class="d-block w-100" alt="Office Photo">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fid%2F479842074%2Fde%2Ffoto%2Fleeren-stra%25C3%259Fe-im-geb%25C3%25A4ude-au%25C3%259Fenansicht.jpg%3Fs%3D612x612%26w%3D0%26k%3D20%26c%3D2OSQLKbbSiPA7gdeY9sX86MhHXb-nXll1YyUQ2l8bss%3D&f=1&nofb=1&ipt=3499b0f96e163ea05b2369f94190fe2842b2ac67ef72e2e7c85d6dee6cb0799d&ipo=images" class="d-block w-100" alt="Building Photo">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev" style="filter: invert(100%);">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next" style="filter: invert(100%);">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
             <p class="about-description">
                 Welcome to our tech-selling shop! We're dedicated to providing the latest and greatest tech products to our customers. With a wide range of smartphones, laptops, accessories, and more, we're your one-stop destination for all things tech.
             </p>
             <p class="about-description">
                 @await Component.InvokeAsync("TeamDescription")
             </p>
+            <div class="accordion mt-3" id="accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Your Tech Oasis
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            Welcome to Lorem Store, your one-stop destination for all things tech! Founded in 2021, we are dedicated to providing our customers with the latest and greatest in technology and electronics. Whether you're a seasoned tech enthusiast or just looking to upgrade your gadgets, we have a wide range of products to meet your needs.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Our Commitment to Tech Excellence
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            At Lorem Store, we pride ourselves on offering top-notch customer service and a carefully curated selection of products. Our team of tech experts is always on hand to assist you in finding the perfect device, accessory, or solution for your specific requirements. We understand that the world of technology is constantly evolving, and we stay at the forefront of these advancements to ensure that you have access to the best products available. From smartphones and laptops to gaming gear and smart home solutions, we have it all under one roof.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Your Trusted Tech Partner
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            We are committed to providing a seamless shopping experience, from browsing our user-friendly website to the swift and secure delivery of your order. Our dedication to quality, innovation, and customer satisfaction sets us apart as a trusted source for all your tech needs. Thank you for choosing Lorem Store as your tech destination, and we look forward to serving you with the latest and greatest in technology for years to come.
+                        </div>
+                    </div>
+                </div>
+            </div>
             <a asp-area="" asp-controller="Home" asp-action="Store" class="home-btn-shop">Go Shopping</a>
         </div>
     </div>
