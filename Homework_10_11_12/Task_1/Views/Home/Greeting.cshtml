@@ -1,7 +1,20 @@
-﻿<container class="about-page">
+﻿<style>
+    .table th, .table td {
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f2f2f2;
+        color: #007bff;
+    }
+</style>
+
+<container class="about-page">
     <div class="row">
         <div class="col-lg-6 offset-lg-3">
             <main-text class="about-title">About Us</main-text>
+
             <div id="carouselExampleFade" class="carousel slide carousel-fade mt-3 mb-3" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -23,12 +36,15 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+
             <p class="about-description">
                 Welcome to our tech-selling shop! We're dedicated to providing the latest and greatest tech products to our customers. With a wide range of smartphones, laptops, accessories, and more, we're your one-stop destination for all things tech.
             </p>
+
             <p class="about-description">
                 @await Component.InvokeAsync("TeamDescription")
             </p>
+
             <div class="accordion mt-3" id="accordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
@@ -67,6 +83,39 @@
                     </div>
                 </div>
             </div>
+
+            <table class="table table-bordered mt-4">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>Founder & CEO</td>
+                        <td>john@lorem.com</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>Marketing Manager</td>
+                        <td>jane@lorem.com</td>
+                    </tr>
+                    <tr>
+                        <td>Bob Johnson</td>
+                        <td>Technical Support</td>
+                        <td>bob@lorem.com</td>
+                    </tr>
+                    <tr>
+                        <td>Alice Davis</td>
+                        <td>Product Manager</td>
+                        <td>alice@lorem.com</td>
+                    </tr>
+                </tbody>
+            </table>
+
             <a asp-area="" asp-controller="Home" asp-action="Store" class="home-btn-shop">Go Shopping</a>
         </div>
     </div>

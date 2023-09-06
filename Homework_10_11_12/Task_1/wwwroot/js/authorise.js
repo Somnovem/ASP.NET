@@ -38,7 +38,7 @@ function checkValidInput() {
         regPass.classList.contains('valid') &&
         regEmail.classList.contains('valid') &&
         regBirthday.classList.contains('valid') &&
-        regGender.value != "") {
+        regGender.value != "disabled") {
         regSubmit.disabled = false;
     }
     else regSubmit.disabled = true;
@@ -107,6 +107,22 @@ regBirthday.addEventListener('input', () => {
         regBirthday.title = "You must be at least 18 years old";
     }
 });
+
+(()=>{
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1;
+    var yyyy = today.getFullYear() - 18;
+    if(dd<10) {
+        dd = '0'+dd
+    } 
+    if(mm<10) {
+        mm = '0'+mm
+    } 
+    today = yyyy + '-' + mm + '-' + dd;
+    regBirthday.value = today;
+    regBirthday.classList.add('valid');
+})();
 
 regUsername.addEventListener('change', checkValidInput);
 regPass.addEventListener('change', checkValidInput);

@@ -1,4 +1,6 @@
-﻿@model Task_1.Models.Product
+﻿@using System.Security.Claims;
+
+@model Task_1.ViewModels.DetailsViewModel
 @{
     ViewData["Title"] = "Details";
 }
@@ -8,23 +10,112 @@
     <div class="row">
         <div class="col-lg-8">
             <div class="product-container">
-                <img src=@Model.Thumbnail alt="Product Image" class="img-fluid product-image">
+                <img src="@Model.Product.Thumbnail" alt="Product Image" class="img-fluid product-image">
             </div>
         </div>
         <div class="col-lg-4">
             <div class="product-container">
-                <h2 class="product-title">@Model.Title</h2>
-                <p class="product-description">@Model.Description</p>
+                <h2 class="product-title">@Model.Product.Title</h2>
+                <p class="product-description">@Model.Product.Description</p>
                 <hr class="divider">
                 <div class="product-details">
-                    <p>Brand: @Model.Brand</p>
-                    <p>Rating: @Model.Rating</p>
-                    <p>Price: $@Model.Price</p>
-                    <p>Discount: @Model.DiscountPercentage%</p>
-                    <p>Stock: @Model.Stock</p>
+                    <p>Brand: @Model.Product.Brand</p>
+                    <p>Rating: @Model.Product.Rating</p>
+                    <p>Price: $@Model.Product.Price</p>
+                    <p>Discount: @Model.Product.DiscountPercentage%</p>
+                    <p>Stock: @Model.Product.Stock</p>
                 </div>
                 <a href="@Url.Action("Store", "Home")" class="back-btn">Back to Store</a>
             </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+
+        @*Leaving reviews*@
+        <div class="col-lg-4" >
+            @{
+                var identity = Context.User.Identity as ClaimsIdentity;
+            }
+            @if (identity != null && identity.IsAuthenticated)
+            {
+                <h4 style="text-align:center;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Leave a Review</h4>
+                <div id="reviewFormContainer">
+                    <form method="post">
+                        <input type="hidden" value="@identity.FindFirst(ClaimTypes.Name)?.Value" name="username"/>
+                        <div class="form-group">
+                            <label for="rating">Rating</label>
+                            <select class="form-control" name="rating" asp-items="Model.FilterViewModel.Ratings"></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" name="message" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Submit Review</button>
+                    </form>
+                </div>
+            }
+        </div>
+
+
+        @*Reading reviews*@
+        <div class="col-lg-8">
+            <h3 style="text-align:center;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">List of Reviews</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <a asp-action="Details"
+                               asp-route-id="@(Model.Product.Id)"
+                               asp-route-sortOrder="@(Model.SortViewModel.NameSort)"
+                               asp-route-name="@(Model.FilterViewModel.SelectedName)"
+                               asp-route-company="@(Model.FilterViewModel.SelectedRating)">User</a>
+                        </th>
+                        <th>
+                            <a asp-action="Details"
+                               asp-route-id="@(Model.Product.Id)"
+                               asp-route-sortOrder="@(Model.SortViewModel.RatingSort)"
+                               asp-route-name="@(Model.FilterViewModel.SelectedName)"
+                               asp-route-company="@(Model.FilterViewModel.SelectedRating)">Rating</a>
+                        </th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var review in Model.Reviews)
+                    {
+                        <td>@review.User!.Username</td>
+                        <td>@review.Rating</td>
+                        <td>@review.Message</td>
+                    }
+                </tbody>
+            </table>
+            <p>
+                @if (Model.PageViewModel.HasPreviousPage)
+                {
+                    <a asp-action="Details"
+                       asp-route-id="@(Model.Product.Id)"
+                       asp-route-page="@(Model.PageViewModel.PageNumber - 1)"
+                       asp-route-name="@(Model.FilterViewModel.SelectedName)"
+                       asp-route-company="@(Model.FilterViewModel.SelectedRating)"
+                       asp-route-sortorder="@(Model.SortViewModel.Current)"
+                       class="glyphicon glyphicon-chevron-left">
+                        <span>Previous</span>
+                    </a>
+                }
+                @if (Model.PageViewModel.HasNextPage)
+                {
+                    <a asp-action="Details"
+                       asp-route-id="@(Model.Product.Id)"
+                       asp-route-page="@(Model.PageViewModel.PageNumber + 1)"
+                       asp-route-name="@(Model.FilterViewModel.SelectedName)"
+                       asp-route-company="@(Model.FilterViewModel.SelectedRating)"
+                       asp-route-sortorder="@(Model.SortViewModel.Current)"
+                       class="glyphicon glyphicon-chevron-right">
+                        Next
+                    </a>
+                }
+            </p>
         </div>
     </div>
 </container>

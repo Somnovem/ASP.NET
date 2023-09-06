@@ -1,0 +1,94 @@
+﻿@model Task_1.Models.ModerationModel
+@{
+	ViewData["Title"] = "Moderating users";
+}
+
+<link rel="stylesheet" href="~/css/moderation.css" asp-append-version="true"/>
+
+<div class="d-flex flex-column" style="align-items:center;">
+    <main-text>Moderating users</main-text>
+    <hr id="mainSeparatorLine" />
+</div>
+
+<container>
+    <div asp-validation-summary="All" style="color:lightcoral;font-weight:500;font-size:1.1rem;"></div>
+</container>
+
+
+
+<div class="form-container">
+    <form method="post">
+        <input type="hidden" asp-for="Id" id="userId">
+        <input-group id="usernameInputGroup">
+            <input id="userUsername" asp-for="Username" type="text" required>
+            <label asp-for="Username">Username</label>
+            <span id="userUsernameValidation" class="validation-error"></span>
+        </input-group>
+        <input-group id="emailInputGroup">
+            <input id="userEmail" asp-for="Email" type="email" required>
+            <label asp-for="Email">Email</label>
+            <span id="userEmailValidation" class="validation-error"></span>
+        </input-group>
+        <input-group id="passwordInputGroup">
+            <input id="userPassword" asp-for="Password" type="password" required>
+            <label asp-for="Password">Password</label>
+            <span id="userPasswordValidation" class="validation-error"></span>
+        </input-group>
+        <input-group class="mb-3">
+            <label asp-for="Gender" class="form-label" style="z-index:10;">Gender</label>
+            <select class="form-select" id="userGender" asp-for="Gender" required>
+                @await Component.InvokeAsync("Option", new { value = "", disabled = true, selected = true, content = "Select your gender"})
+                @await Component.InvokeAsync("Option", new { value = "M", content = "Male"})
+                @await Component.InvokeAsync("Option", new { value = "F", content = "Female"})
+                @await Component.InvokeAsync("Option", new { value = "O", content = "Other"})
+            </select>
+        </input-group>
+        <input-group class="mb-3" id="birthdayInputGroup">
+            <label asp-for="Birthday" class="form-label" style="z-index:10;">Birthday</label>
+            <input type="date" class="form-control" id="userBirthday" asp-for="Birthday" required>
+            <span id="userBirthdayValidation" class="validation-error"></span>
+        </input-group>
+        <div style="display:flex;align-items:center;justify-content:center;">
+            <submit-btn id="btnSubmit" disabled>Submit</submit-btn>
+        </div>
+    </form>
+</div>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Birthday</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Users != null)
+        {
+            @foreach (var user in Model.Users)
+            {
+                <tr>
+                    <td class="user-id">@user.Id</td>
+                    <td class="user-username">@user.Username</td>
+                    <td class="user-email">@user.Email</td>
+                    <td class="user-gender">@user.Gender</td>
+                    <td class="user-birthdate">@user.BirthDate.ToString("yyyy-MM-dd")</td>
+                    <td><button class="btn btn-primary btn-change-user">Change</button></td>
+                    <td>
+                        <form method="post" onsubmit="return confirm('Do you really want to delete {@user.Username} ?');">
+                            <input type="hidden" asp-for="Id" value="@user.Id">
+                            <input type="hidden" asp-for="IsDeleting" value="true">
+                            <button type="submit" class="btn btn-danger btn-delete-user">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<script src="~/js/moderation.js" asp-append-version="true" />
+

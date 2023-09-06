@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\css\\messages.css"
     },
     {
+      "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\css\\moderation.css",
+      "PackagePath": "staticwebassets\\css\\moderation.css"
+    },
+    {
       "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\css\\navbar.css",
       "PackagePath": "staticwebassets\\css\\navbar.css"
     },
@@ -55,6 +59,10 @@
     {
       "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\js\\messages.js",
       "PackagePath": "staticwebassets\\js\\messages.js"
+    },
+    {
+      "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\js\\moderation.js",
+      "PackagePath": "staticwebassets\\js\\moderation.js"
     },
     {
       "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\js\\site.js",

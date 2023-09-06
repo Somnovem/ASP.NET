@@ -12,6 +12,7 @@
         public float Price { get; set; }
         public float DiscountPercentage { get; set; }
         public int Stock { get; set; }
+        public List<Review> Reviews { get; set; } = new();
     }
 
     public class ProductAPIResponse

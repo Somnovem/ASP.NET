@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B295GlNCouPpoen9No3xXY+czCEFNRz84sC6fhqAQoQ=",
+  "Hash": "vBTF51Rd1e9sPTQKRj3tVp4mQX0D5UiBF7Z9kg+EvlQ=",
   "Source": "Task_1",
   "BasePath": "_content/Task_1",
   "Mode": "Default",
@@ -153,6 +153,23 @@
       "OriginalItemSpec": "wwwroot\\css\\messages.css"
     },
     {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\css\\moderation.css",
+      "SourceId": "Task_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\",
+      "BasePath": "_content/Task_1",
+      "RelativePath": "css/moderation.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\moderation.css"
+    },
+    {
       "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\css\\navbar.css",
       "SourceId": "Task_1",
       "SourceType": "Discovered",
@@ -270,6 +287,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\messages.js"
+    },
+    {
+      "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\js\\moderation.js",
+      "SourceId": "Task_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\",
+      "BasePath": "_content/Task_1",
+      "RelativePath": "js/moderation.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\moderation.js"
     },
     {
       "Identity": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_10_11_12\\Task_1\\wwwroot\\js\\site.js",

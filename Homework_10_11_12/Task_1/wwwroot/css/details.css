@@ -52,15 +52,34 @@
     transition: all .5s ease;
 }
 
-    .back-btn:hover {
-        transform: scale(1.03);
-        box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.56);
-        -webkit-box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.56);
-        -moz-box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.56);
-    }
+.back-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.56);
+    -webkit-box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.56);
+    -moz-box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.56);
+}
 
 .divider {
     border-top: 3px solid #000000;
     width: 65%;
     margin: 20px auto;
+}
+
+#reviewFormContainer {
+    padding:10px 20px;
+    border: 1px groove #666666;
+    border-radius: 10px 10px 15% 10px;
+}
+
+.glyphicon {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.glyphicon-chevron-right:after {
+    content: "\00BB";
+}
+
+.glyphicon-chevron-left:before {
+    content: "\00AB";
 }
