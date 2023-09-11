@@ -8,7 +8,7 @@ namespace Task_1
 {
     public static class ListBuilder
     {
-        public static HtmlString CreateStoreList(this IHtmlHelper html, Product[] products)
+        public static HtmlString CreateStoreList(this IHtmlHelper html, List<Product> products)
         {
             TagBuilder divContainer = new TagBuilder("div");
             foreach (Product product in products)

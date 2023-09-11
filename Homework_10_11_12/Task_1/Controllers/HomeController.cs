@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Diagnostics;
@@ -7,8 +6,7 @@ using System.Security.Claims;
 using Task_1.Models;
 using Task_1.ViewModels;
 using Task_1.Filters;
-using Microsoft.Data.SqlClient;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using Task_1.Sessions;
 
 namespace Task_1.Controllers
 {
@@ -16,17 +14,23 @@ namespace Task_1.Controllers
     [RequestTimeFilter]
     public class HomeController : Controller
     {
-        ApplicationContext context;
-        public HomeController(ApplicationContext db)
+        ApplicationContext _context;
+        private readonly ILogger<HomeController> _logger;
+        public HomeController(ApplicationContext db,ILogger<HomeController> logger)
         {
-            context = db;
+            _logger = logger;
+            _context = db;
         }
 
         [Route("")]
         [Route("Index")]
         public IActionResult Index()
         {
-            return View();
+            IndexViewModel model = new IndexViewModel()
+            {
+                TopViewedProducts = _context.Products.AsNoTracking().OrderByDescending(x=>x.Views).Take(3).ToList()
+            };
+            return View(model);
         }
 
         [Route("About")]
@@ -41,7 +45,7 @@ namespace Task_1.Controllers
         {
             int reviewCount = 3;
             
-            IQueryable<Review> reviews = context.Reviews.AsNoTracking().Where(review => review.ProductId == id).Include(x => x.User);
+            IQueryable<Review> reviews = _context.Reviews.AsNoTracking().Where(review => review.ProductId == id).Include(x => x.User);
 
             //Filtering
             if (!string.IsNullOrEmpty(name)) reviews = reviews.Where(review => review.User!.Username.Contains(name));
@@ -68,11 +72,11 @@ namespace Task_1.Controllers
             //Paginating
             reviews = reviews.Skip((page - 1) * reviewCount).Take(reviewCount);
             List<int> ratings = new List<int>() {1,2,3,4,5};
-            var product = context.Products.AsNoTracking().Where(product => product.Id == id).Include(x => x.Reviews).ThenInclude(review => review.User).ToList()[0];
+            var product = _context.Products.AsNoTracking().Where(product => product.Id == id).Include(x => x.Reviews).ThenInclude(review => review.User).ToList()[0];
             DetailsViewModel model = new DetailsViewModel(
                 product,
                 reviews,
-                new PageViewModel(context.Reviews.AsNoTracking().Count(), page, reviewCount),
+                new PageViewModel(_context.Reviews.AsNoTracking().Count(), page, reviewCount),
                 new FilterViewModel(ratings, rating, name),
                 new SortViewModel(sortOrder)
             );
@@ -84,6 +88,19 @@ namespace Task_1.Controllers
         [HttpGet]
         public IActionResult Details(int id,string name, int rating = 0, int page = 1, SortState sortOrder = SortState.NameAsc)
         {
+            if (!HttpContext.Session.Keys.Contains("ViewedProductIds"))
+            {
+                HttpContext.Session.Set<List<int>>("ViewedProductIds", new List<int>());
+            }
+            if (User.Claims.FirstOrDefault(c=>c.Type == ClaimTypes.Name) != null && !HttpContext.Session.Get<List<int>>("ViewedProductIds")!.Contains(id))
+            {
+                Product productViewed = _context.Products.First(product => product.Id == id);
+                ++productViewed.Views;
+                _context.SaveChanges();
+                List<int> newViewedProductIds = HttpContext.Session.Get<List<int>>("ViewedProductIds")!;
+                newViewedProductIds.Add(id);
+                HttpContext.Session.Set<List<int>>("ViewedProductIds", newViewedProductIds);
+            }
             return FormDetailsPage(id, name, rating, page, sortOrder);
         }
 
@@ -92,16 +109,16 @@ namespace Task_1.Controllers
         [HttpPost]
         public IActionResult Details(int id,string username, int rating, string message)
         {
-            int userId = context.Users.AsNoTracking().First(x => x.Username == username).Id;
-            context.Reviews.Add(new Review()
+            int userId = _context.Users.AsNoTracking().First(x => x.Username == username).Id;
+            _context.Reviews.Add(new Review()
             {
                 Message = message,
                 UserId = userId,
                 Rating = rating,
                 ProductId = id
             });
-            context.SaveChanges();
-            return View(context.Products.AsNoTracking().Where(product => product.Id == id).Include(x => x.Reviews).ThenInclude(review => review.User).ToList()[0]);
+            _context.SaveChanges();
+            return FormDetailsPage(id, "", 0, 1, SortState.NameAsc);
         }
 
         [Route("Store")]
@@ -110,7 +127,7 @@ namespace Task_1.Controllers
         public async Task<IActionResult> Store()
         {
             StoreViewModel model = new StoreViewModel();
-            model.Products = context.Products.AsNoTracking().ToList();
+            model.Products = _context.Products.AsNoTracking().ToList();
             if (model.Products.Count == 0)
             {
                 var apiUrl = $"https://dummyjson.com/products";
@@ -142,8 +159,8 @@ namespace Task_1.Controllers
                                 Thumbnail = item.Thumbnail
                             });
                         }
-                        context.Products.AddRange(model.Products);
-                        context.SaveChanges();
+                        _context.Products.AddRange(model.Products);
+                        _context.SaveChanges();
                     }
                 }
             }
@@ -166,13 +183,13 @@ namespace Task_1.Controllers
                 model.IsManager = isManagerValue;
                 if (model.IsManager)
                 {
-                    model.UserMessages = context.UserMessages.AsNoTracking().ToList();
+                    model.UserMessages = _context.UserMessages.AsNoTracking().ToList();
                 }
                 return View(model);
             }
             else
             {
-                return RedirectToAction("Auth");
+                return RedirectToAction("Auth","Account");
             }
         }
 
@@ -182,13 +199,13 @@ namespace Task_1.Controllers
         {
             try
             {
-                context.UserMessages.Add(new UserMessage
+                _context.UserMessages.Add(new UserMessage
                 {
-                    UserId = context.Users.Where(user => user.Username == username).ToList()[0].Id,
+                    UserId = _context.Users.Where(user => user.Username == username).ToList()[0].Id,
                     MessageText = message,
                     DateSent = DateTime.Now
                 });
-                context.SaveChanges();
+                _context.SaveChanges();
                 return RedirectToAction("Store");
             }
             catch
@@ -197,195 +214,9 @@ namespace Task_1.Controllers
             }
         }
 
-
-        [Route("Auth")]
-        [Route("Authorisation")]
-        [HttpGet]
-        public IActionResult Auth()
-        {
-            PersonLogin model = new PersonLogin();
-            var identity = HttpContext.User.Identity as ClaimsIdentity;
-            model.IsLoggedIn = (identity != null && identity.IsAuthenticated);
-            model.Username = identity.FindFirst(ClaimTypes.Name)?.Value;
-            bool.TryParse(Request.Cookies["IsManager"], out bool isManagerValue);
-            model.IsManager = isManagerValue;
-            return View(model);
-        }
-
-        [Route("Auth")]
-        [Route("Authorisation")]
-        [HttpPost]
-        public async Task<IActionResult> Auth(PersonLogin person)
-        {
-            if (person.IsLogin)
-            {
-                string encryptedPassword = Encrypter.CalculateSHA256(person.Password);
-                User user = context.Users.AsNoTracking().FirstOrDefault(user => user.Username == person.Username && user.Password == encryptedPassword);
-                if (user == null)
-                {
-                    Manager manager = context.Managers.AsNoTracking().FirstOrDefault(manager => manager.Username == person.Username && manager.Password == encryptedPassword);
-                    if (manager != null)
-                    {
-                        Response.Cookies.Append("IsManager", "True");
-                    }
-                    else
-                    {
-                        Response.Cookies.Append("IsManager", "False");
-                        ModelState.AddModelError("", "No such user found or invalid password");
-                        return View(person);
-                    }
-                }
-            }
-            else
-            {
-                User user = context.Users.FirstOrDefault(user => user.Username == person.Username);
-                int errors = 0;
-                if (user != null)
-                {
-                    ModelState.AddModelError("Username", "Username already in use");
-                    ++errors;
-                }
-                user = context.Users.FirstOrDefault(user => user.Email == person.Email);
-                if (user != null)
-                {
-                    ModelState.AddModelError("Email", "Email already in use");
-                    ++errors;
-                }
-                if (errors != 0)
-                {
-                    return View(person);
-                }
-
-                User newUser = new User() { Username = person.Username, Email = person.Email, Password = Encrypter.CalculateSHA256(person.Password), Gender = person.Gender[0], BirthDate = person.Birthday ?? DateTime.Now};
-                context.Users.Add(newUser);
-                context.SaveChanges();
-            }
-            var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, person.Username)
-            };
-            var identity = new ClaimsIdentity(claims, "LoremIpsumAuthScheme");
-            var principal = new ClaimsPrincipal(identity);
-            await HttpContext.SignInAsync("LoremIpsumAuthScheme", principal);
-            return RedirectToAction("Auth");
-        }
-
-
-
-		[Route("Mod")]
-		[Route("Moder")]
-		[Route("Moderation")]
-		[HttpGet]
-		public IActionResult Moderation()
-		{
-			var identity = HttpContext.User.Identity as ClaimsIdentity;
-            if (identity != null && identity.IsAuthenticated)
-			{
-				bool.TryParse(Request.Cookies["IsManager"], out bool isManagerValue);
-                if (isManagerValue)
-                {
-                    ModerationModel model = new ModerationModel();
-                    model.Users = context.Users.AsNoTracking().ToList();
-                    return View(model);
-                }
-                else return RedirectToAction("Index");
-			}
-			else return RedirectToAction("Index");
-		}
-
-        [Route("Mod")]
-        [Route("Moder")]
-        [Route("Moderation")]
-        [HttpPost]
-        public IActionResult Moderation(ModerationModel model)
-        {
-            if (model.IsDeleting) //Deleting a user
-            {
-                User user = context.Users.Where(user => user.Id == model.Id).ToList()[0];
-                context.Users.Remove(user);
-                context.SaveChanges();
-            }
-            else
-            {
-                if (model.Id == 0) //New Account
-                {
-                    User user = context.Users.AsNoTracking().FirstOrDefault(user => user.Username == model.Username);
-                    int errors = 0;
-                    if (user != null)
-                    {
-                        ModelState.AddModelError("Username", "Username already in use");
-                        ++errors;
-                    }
-                    user = context.Users.AsNoTracking().FirstOrDefault(user => user.Email == model.Email);
-                    if (user != null)
-                    {
-                        ModelState.AddModelError("Email", "Email already in use");
-                        ++errors;
-                    }
-                    else
-                    {
-                        Manager manager = context.Managers.AsNoTracking().FirstOrDefault(manager => manager.Email == model.Email);
-                        if (manager != null)
-                        {
-                            ModelState.AddModelError("Email", "Email already in use");
-                            ++errors;
-                        }
-                    }
-                    if (errors != 0)
-                    {
-                        return View(model);
-                    }
-                    User newUser = new User() { Username = model.Username, Email = model.Email!, Password = Encrypter.CalculateSHA256(model.Password), Gender = model.Gender![0], BirthDate = model.Birthday ?? DateTime.Now };
-                    context.Users.Add(newUser);
-                    context.SaveChanges();
-                }
-                else //Changing existing
-                {
-                    int errors = 0;
-                    User user = context.Users.AsNoTracking().FirstOrDefault(user => user.Username == model.Username && user.Id != model.Id);
-                    if (user != null)
-                    {
-                        ModelState.AddModelError("Username", "Username already in use");
-                        ++errors;
-                    }
-                    user = context.Users.AsNoTracking().FirstOrDefault(user => user.Email == model.Email && user.Id != model.Id);
-                    if (user != null)
-                    {
-                        ModelState.AddModelError("Email", "Email already in use");
-                        ++errors;
-                    }
-                    else
-                    {
-                        Manager manager = context.Managers.AsNoTracking().FirstOrDefault(manager => manager.Email == model.Email && manager.Id != model.Id);
-                        if (manager != null)
-                        {
-                            ModelState.AddModelError("Email", "Email already in use");
-                            ++errors;
-                        }
-                    }
-                    if (errors != 0)
-                    {
-                        return View(model);
-                    }
-                    var userToChange = context.Users.Where(user => user.Id == model.Id).ToList()[0];
-                    userToChange.Username = model.Username;
-                    userToChange.Email = model.Email;
-                    userToChange.Password = model.Password;
-                    userToChange.BirthDate = model.Birthday ?? DateTime.Now; //Birthday will always be not null
-                    userToChange.Gender = model.Gender[0];
-                    context.SaveChanges();
-                }
-            }
-            return RedirectToAction("Moderation");
-        }
-
-
-
-
-
 		public IActionResult StoreItems()
         {
-            var jsonData = JsonConvert.SerializeObject(context.Products.AsNoTracking().ToList());
+            var jsonData = JsonConvert.SerializeObject(_context.Products.AsNoTracking().ToList());
             return new JsonResult(jsonData);
         }
 

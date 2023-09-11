@@ -1,0 +1,68 @@
+body {
+    background: linear-gradient(45deg, #007BFF, #4A90E2);
+    background-size: 400% 400%;
+    animation: gradient 15s infinite alternate;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin-top: 30px;
+}
+
+h1 {
+    color: #007BFF;
+}
+
+#loan-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+#loan-info {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.btn-take-loan {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-take-loan:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}

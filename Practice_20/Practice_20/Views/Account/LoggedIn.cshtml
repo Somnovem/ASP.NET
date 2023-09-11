@@ -1,0 +1,20 @@
+﻿@model Practice_20.ViewModels.LoggedInModel;
+@{
+    ViewData["Title"] = "Account Info";
+}
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <h1 class="display-4 mb-4">
+            You're already logged in!
+        </h1>
+        <div class="card">
+            <h3>Email: </h3><h4 style="display: inline-block">@Model.Email</h4>
+            <h3>Birthday: </h3><h4 style="display: inline-block">@Model.Birthday.ToShortDateString()</h4>
+        </div>
+        <form method="post">
+            <input type="hidden" asp-for="LogOut" value="true">
+            <button type="submit" class="btn btn-danger btn-block mt-4">Log Out</button>
+        </form>
+    </div>
+</div>

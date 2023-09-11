@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Task_1.Filters;
 using Task_1.Models;
+using Task_1.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,23 +9,31 @@ string connection = builder.Configuration.GetConnectionString("DefaultConnection
 
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection));
 
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
+
 builder.Services.AddAuthentication("LoremIpsumAuthScheme")
        .AddCookie("LoremIpsumAuthScheme", options => {
            options.Cookie.Name = "LoremIpsumCookie";
            options.ExpireTimeSpan = TimeSpan.FromDays(14);
        });
 
-
-// Add services to the container.
 builder.Services.AddControllersWithViews(options => options.Filters.Add<CustomExceptionFilterAttribute>());
+
+string logsPath = Path.Combine(Directory.GetCurrentDirectory(),"Logs");
+
+if (!Directory.Exists(logsPath))
+{
+    Directory.CreateDirectory(logsPath);
+}
+
+builder.Logging.AddFile(Path.Combine(logsPath, $"{DateTime.Now.ToString("yyyy-MM-dd")}.txt"));
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -35,6 +44,8 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

@@ -1,0 +1,97 @@
+﻿@{
+   ViewData["Title"] = "Loans";
+}
+
+<link rel="stylesheet" href="~/css/auth.css" asp-append-version="true">
+
+<div class="container">
+    <h1 class="text-center">Why Choose Our Loans?</h1>
+    <div id="loan-info">
+        <h2>Advantages</h2>
+        <div class="accordion" id="advantagesAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advantage1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#advantageCollapse1" aria-expanded="true" aria-controls="advantageCollapse1">
+                        Low Interest Rates
+                    </button>
+                </h2>
+                <div id="advantageCollapse1" class="accordion-collapse collapse show" aria-labelledby="advantage1" data-bs-parent="#advantagesAccordion">
+                    <div class="accordion-body">
+                        Our interest rates are among the lowest in the market, making your loans more affordable.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advantage2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advantageCollapse2" aria-expanded="false" aria-controls="advantageCollapse2">
+                        Flexible Repayment Plans
+                    </button>
+                </h2>
+                <div id="advantageCollapse2" class="accordion-collapse collapse" aria-labelledby="advantage2" data-bs-parent="#advantagesAccordion">
+                    <div class="accordion-body">
+                        We offer a variety of repayment plans to suit your financial needs and preferences.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advantage3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advantageCollapse3" aria-expanded="false" aria-controls="advantageCollapse3">
+                        Quick Approval Process
+                    </button>
+                </h2>
+                <div id="advantageCollapse3" class="accordion-collapse collapse" aria-labelledby="advantage3" data-bs-parent="#advantagesAccordion">
+                    <div class="accordion-body">
+                        Our loan approval process is fast and efficient, ensuring you get your funds when you need them.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advantage4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advantageCollapse4" aria-expanded="false" aria-controls="advantageCollapse4">
+                        Excellent Customer Support
+                    </button>
+                </h2>
+                <div id="advantageCollapse4" class="accordion-collapse collapse" aria-labelledby="advantage4" data-bs-parent="#advantagesAccordion">
+                    <div class="accordion-body">
+                        Our dedicated customer support team is available to assist you with any questions or concerns.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="loan-options">
+        <hr style="border:none;width: 80%;color: #0077cc;height: 3px;margin: 5vh auto"/>
+        <h2>Loan Options</h2>
+        <table class="table mt-3">
+            <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Loan Plan</th>
+                <th scope="col">Interest Rate</th>
+                <th scope="col">Comparison to Other Offers</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Standard Plan</td>
+                <td>4.5%</td>
+                <td>Competitive rates</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Extended Plan</td>
+                <td>3.9%</td>
+                <td>Lower rates than most</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Special Offer</td>
+                <td>3.2%</td>
+                <td>Best rate in the market</td>
+            </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-take-loan">Take a Loan</button>
+    </div>
+</div>
