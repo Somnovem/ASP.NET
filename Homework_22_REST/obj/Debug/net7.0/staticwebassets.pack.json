@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_22_REST\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_22_REST\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\Projects\\ASP.NET_Learning\\ASP.NET\\Homework_22_REST\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Homework_22_REST.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Homework_22_REST.props",
+      "PackagePath": "build\\Homework_22_REST.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Homework_22_REST.props",
+      "PackagePath": "buildMultiTargeting\\Homework_22_REST.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Homework_22_REST.props",
+      "PackagePath": "buildTransitive\\Homework_22_REST.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

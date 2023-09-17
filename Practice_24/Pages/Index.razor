@@ -1,0 +1,204 @@
+﻿@page "/"
+
+<PageTitle>Calculator</PageTitle>
+
+<style>
+    .calc-body {
+        width: 275px;
+        margin: auto;
+        min-height: 400px;
+        box-shadow: 0 8px 50px -7px black;
+        background: #3A4655;
+    }
+
+    .calc-screen {
+        padding: 1rem;
+    }
+    #calc-operation {
+        font-size: 1.3rem;
+        text-align: right;
+        color: #727B86;
+        padding-bottom: .5rem;
+    }
+    #calc-typed {
+        font-size: 2rem;
+        text-align: right;
+        color: #fff;
+    }
+
+    .calc-button-row{
+        display: table;
+    }
+    .calc-button-row button {
+        display: table-cell;
+        width: 25%;
+        background: #425062;
+        color: #fff;
+        height: 65px;
+        font-size: 1.3rem;
+        border: none;
+        border-color:#3C4857;
+        border-width: 1px 1px 0px 0;
+        border-style: solid;
+    }
+    .calc-button-row button.ac {
+        color: #ff7665;
+    }
+    .calc-button-row button.opt {
+        color: #ffbc56;
+    }
+
+    .calc-button-row button:nth-child(4n){
+        border-right: none;
+    }
+    .calc-button-row button:active {
+        position: relative;
+        top: 1px;
+    }
+    .calc-button-row button:hover {
+        background: #3e4b5c;
+    }
+</style>
+
+
+<div class="calc-body">
+
+    <!-- Calculator Display Screen -->
+    <div class="calc-screen">
+        <div id="calc-operation">@history</div>
+        <div id="calc-typed">@numberHolder</div>
+    </div>
+
+    <!-- Calculator Buttons -->
+    <div class="calc-button-row">
+        <button class="ac" @onclick="Clear">AC</button>
+        <button class="opt" @onclick="Opposite">&#43;&#47;&#8722;</button>
+        <button class="opt" @onclick='() => ConfirmAction("Mod")'>&#37;</button>
+        <button class="opt" @onclick='() => ConfirmAction("/")'>&#247;</button>
+        <button class="ac" @onclick="ClearCurrent">C</button>
+        <button class="opt" @onclick="Square">x<sup>2</sup></button>
+        <button class="opt" @onclick="SquareRoot">√</button>
+        <button class="opt" @onclick='() => ConfirmAction("Pow")'>x<sup>y</sup></button>
+        <button @onclick='() => PressDigit("7")'>7</button>
+        <button @onclick='() => PressDigit("8")'>8</button>
+        <button @onclick='() => PressDigit("9")'>9</button>
+        <button class="opt" @onclick='() => ConfirmAction("*")'>&#215;</button>
+        <button @onclick='() => PressDigit("4")'>4</button>
+        <button @onclick='() => PressDigit("5")'>5</button>
+        <button @onclick='() => PressDigit("6")'>6</button>
+        <button class="opt" @onclick='() => ConfirmAction("-")'>&#8722;</button>
+        <button @onclick='() => PressDigit("1")'>1</button>
+        <button @onclick='() => PressDigit("2")'>2</button>
+        <button @onclick='() => PressDigit("3")'>3</button>
+        <button class="opt" @onclick='() => ConfirmAction("+")'>&#43;</button>
+        <button @onclick='() => PressDigit("0")'>0</button>
+        <button @onclick='() => PressDigit(".")'>.</button>
+        <button @onclick="Backspace">&#9003;</button>
+        <button class="opt" @onclick="Equals">&#61;</button>
+    </div>
+</div>
+
+@code
+{
+    private float firstNumber;
+    private float secondNumber;
+    private string numberHolder = "0";
+    private string action;
+    private string history;
+    private bool performedAction = false;
+
+    private void ConfirmAction(string clickedAction)
+    {
+        firstNumber = float.Parse(numberHolder);
+        action = clickedAction;
+        history = $"{firstNumber} {action}";
+        numberHolder = "0";
+    }
+
+    private void PressDigit(string digit)
+    {
+        if (performedAction)
+        {
+            Clear();
+            performedAction = false;
+        }
+        if (numberHolder == "0") numberHolder = "";
+        numberHolder += digit;
+    }
+
+    private void Opposite()
+    {
+        if (numberHolder.Length != 0 && numberHolder != "0")
+        {
+            if (numberHolder[0] == '-') numberHolder = numberHolder.Remove(0, 1);
+            else numberHolder = numberHolder.Insert(0, "-");
+        }
+    }
+
+    private void Backspace()
+    {
+        if (!performedAction && numberHolder.Length != 0 && numberHolder != "0") numberHolder = numberHolder.Remove(numberHolder.Length - 1,1);
+        if (numberHolder.Length == 0) numberHolder = "0";
+    }
+
+    private void Clear()
+    {
+        firstNumber = 0;
+        history = "";
+        numberHolder = "0";
+    }
+
+    private void ClearCurrent()
+    {
+        if(!performedAction) numberHolder = "0";
+    }
+
+    private void Square()
+    {
+        firstNumber = float.Parse(numberHolder);
+        history = $"{firstNumber} ^ 2 =";
+        numberHolder = (firstNumber * firstNumber).ToString();
+        performedAction = true;
+    }
+
+    private void SquareRoot()
+    {
+        firstNumber = float.Parse(numberHolder);
+        history = $"{firstNumber} sqrt 2 =";
+        numberHolder = Math.Sqrt(firstNumber).ToString();
+        performedAction = true;
+    }
+
+    private void Equals()
+    {
+        secondNumber = float.Parse(numberHolder);
+        switch (action)
+        {
+            case "+":
+                history = $"{firstNumber} + {secondNumber} =";
+                numberHolder = (firstNumber + secondNumber).ToString();
+                break;
+            case "-":
+                history = $"{firstNumber} - {secondNumber} =";
+                numberHolder = (firstNumber - secondNumber).ToString();
+                break;
+            case "*":
+                history = $"{firstNumber} * {secondNumber} =";
+                numberHolder = (firstNumber * secondNumber).ToString();
+                break;
+            case "/":
+                history = $"{firstNumber} / {secondNumber} =";
+                numberHolder =  secondNumber == 0 ? "can't dvd by 0" : (firstNumber / secondNumber).ToString();
+                break;
+            case "Mod":
+                history = $"{firstNumber} % {secondNumber} =";
+                numberHolder = ((int)(firstNumber / secondNumber)).ToString();
+                break;
+            case "Pow":
+                history = $"{firstNumber} ^ {secondNumber} =";
+                numberHolder = (Math.Pow(firstNumber,secondNumber)).ToString();
+                break;
+        }
+        performedAction = true;
+    }
+}
