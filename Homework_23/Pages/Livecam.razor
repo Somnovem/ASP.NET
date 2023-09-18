@@ -1,0 +1,82 @@
+﻿@page "/livecam"
+
+<PageTitle>Live Otter Cam</PageTitle>
+
+<style>
+    /* Custom CSS styles */
+    .video-container {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        margin: 20px;
+        padding: 20px 0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .card {
+        margin: 20px;
+        margin-top:20%;
+        border-radius:20px;
+    }
+
+    .donate-title {
+        font-size: 32px;
+        text-align:center;
+    }
+
+    .donate-text {
+        font-size: 24px;
+        margin-top: 20px;
+        text-align: center;
+        font-weight:700;
+        color: cornflowerblue;
+    }
+
+    .donate-button {
+        margin:0 25%;
+        margin-top: 20px;
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+</style>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="display-4 text-center">Live Otter Cam</h1>
+            <hr style="width: 80%;margin:0 auto; border:none; height:3px; border-radius:15px;color:dimgray;">
+            <div class="video-container">
+                <iframe width="900" height="600" src="https://www.youtube.com/embed/WrKZzs-CB_8?autoplay=1" title="Live Sea Otter Cam - Monterey Bay Aquarium" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="donate-title">Donate</h2>
+                    <hr style="width: 80%;margin:0 auto; border:none; height:3px; border-radius:15px;color:dimgray;">
+                    <p class="donate-text">You donated: $@currentSum</p>
+                    <div class="donate-button">
+                        <button class="btn btn-success" @onclick="() => IncrementDonationSum(1)">Donate $1</button>
+                        <button class="btn btn-success" @onclick="() => IncrementDonationSum(5)">Donate $5</button>
+                        <button class="btn btn-success" @onclick="() => IncrementDonationSum(10)">Donate $10</button>
+                        <button class="btn btn-success" @onclick="() => IncrementDonationSum(20)">Donate $20</button>
+                        <button class="btn btn-success" @onclick="() => IncrementDonationSum(50)">Donate $50</button>
+                        <button class="btn btn-success" @onclick="() => IncrementDonationSum(100)">Donate $100</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private int currentSum = 0;
+
+    private void IncrementDonationSum(int sum)
+    {
+        currentSum += sum;
+    }
+}

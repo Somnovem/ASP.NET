@@ -46,7 +46,21 @@
             </div>
         </div>
     </container>
-    @Html.CreateStoreList(Model.Products);
+    @Html.CreateStoreList(Model.Products)
+    <div class="row">
+        <div class="col-6">
+            @if (Model.HasPreviousPage)
+            {
+                <a class="btn btn-primary" href="@("/Store/" + ((int)ViewData["page"] - 1))">&lt;Previous</a>
+            }
+        </div>
+        <div class="col-6 d-flex" style="flex-direction:row-reverse;">
+            @if (Model.HasNextPage)
+            {
+                <a class="btn btn-primary" href="@("/Store/" + ((int)ViewData["page"] + 1))">Next &gt</a>
+            }
+        </div>
+    </div>
 </container>
 
 <script src="~/js/store.js" asp-append-version="true"></script>

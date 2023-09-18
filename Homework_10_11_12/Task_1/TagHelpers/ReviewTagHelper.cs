@@ -4,7 +4,7 @@ namespace Task_1.TagHelpers
 {
     public class ReviewTagHelper : TagHelper
     {
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
         public string Message { get; set; }
         public DateTime Date { get; set; }
         public override void Process(TagHelperContext context, TagHelperOutput output)

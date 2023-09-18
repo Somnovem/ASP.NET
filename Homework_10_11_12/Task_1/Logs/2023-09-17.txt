@@ -1,0 +1,3527 @@
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (41ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (24ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[@__8__locals1_person_Username_0='?' (Size = 4000), @__encryptedPassword_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__8__locals1_person_Username_0 AND [u].[Password] = @__encryptedPassword_1
+Executed DbCommand (10ms) [Parameters=[@__8__locals1_person_Username_0='?' (Size = 4000), @__encryptedPassword_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[BirthDate], [m].[Email], [m].[EmployedDate], [m].[FirstName], [m].[Gender], [m].[LastName], [m].[Password], [m].[Username]
+FROM [Managers] AS [m]
+WHERE [m].[Username] = @__8__locals1_person_Username_0 AND [m].[Password] = @__encryptedPassword_1
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (28ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (17ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (29ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (27ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (14ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (14ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (27ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (17ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (27ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (29ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (27ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (28ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (29ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Single), @p4='?' (DbType = Single), @p5='?' (DbType = Single), @p6='?' (DbType = Int32), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Int32), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Single), @p14='?' (DbType = Single), @p15='?' (DbType = Single), @p16='?' (DbType = Int32), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Int32), @p20='?' (Size = 4000), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (DbType = Single), @p24='?' (DbType = Single), @p25='?' (DbType = Single), @p26='?' (DbType = Int32), @p27='?' (Size = 4000), @p28='?' (Size = 4000), @p29='?' (DbType = Int32), @p30='?' (Size = 4000), @p31='?' (Size = 4000), @p32='?' (Size = 4000), @p33='?' (DbType = Single), @p34='?' (DbType = Single), @p35='?' (DbType = Single), @p36='?' (DbType = Int32), @p37='?' (Size = 4000), @p38='?' (Size = 4000), @p39='?' (DbType = Int32), @p40='?' (Size = 4000), @p41='?' (Size = 4000), @p42='?' (Size = 4000), @p43='?' (DbType = Single), @p44='?' (DbType = Single), @p45='?' (DbType = Single), @p46='?' (DbType = Int32), @p47='?' (Size = 4000), @p48='?' (Size = 4000), @p49='?' (DbType = Int32), @p50='?' (Size = 4000), @p51='?' (Size = 4000), @p52='?' (Size = 4000), @p53='?' (DbType = Single), @p54='?' (DbType = Single), @p55='?' (DbType = Single), @p56='?' (DbType = Int32), @p57='?' (Size = 4000), @p58='?' (Size = 4000), @p59='?' (DbType = Int32), @p60='?' (Size = 4000), @p61='?' (Size = 4000), @p62='?' (Size = 4000), @p63='?' (DbType = Single), @p64='?' (DbType = Single), @p65='?' (DbType = Single), @p66='?' (DbType = Int32), @p67='?' (Size = 4000), @p68='?' (Size = 4000), @p69='?' (DbType = Int32), @p70='?' (Size = 4000), @p71='?' (Size = 4000), @p72='?' (Size = 4000), @p73='?' (DbType = Single), @p74='?' (DbType = Single), @p75='?' (DbType = Single), @p76='?' (DbType = Int32), @p77='?' (Size = 4000), @p78='?' (Size = 4000), @p79='?' (DbType = Int32), @p80='?' (Size = 4000), @p81='?' (Size = 4000), @p82='?' (Size = 4000), @p83='?' (DbType = Single), @p84='?' (DbType = Single), @p85='?' (DbType = Single), @p86='?' (DbType = Int32), @p87='?' (Size = 4000), @p88='?' (Size = 4000), @p89='?' (DbType = Int32), @p90='?' (Size = 4000), @p91='?' (Size = 4000), @p92='?' (Size = 4000), @p93='?' (DbType = Single), @p94='?' (DbType = Single), @p95='?' (DbType = Single), @p96='?' (DbType = Int32), @p97='?' (Size = 4000), @p98='?' (Size = 4000), @p99='?' (DbType = Int32), @p100='?' (Size = 4000), @p101='?' (Size = 4000), @p102='?' (Size = 4000), @p103='?' (DbType = Single), @p104='?' (DbType = Single), @p105='?' (DbType = Single), @p106='?' (DbType = Int32), @p107='?' (Size = 4000), @p108='?' (Size = 4000), @p109='?' (DbType = Int32), @p110='?' (Size = 4000), @p111='?' (Size = 4000), @p112='?' (Size = 4000), @p113='?' (DbType = Single), @p114='?' (DbType = Single), @p115='?' (DbType = Single), @p116='?' (DbType = Int32), @p117='?' (Size = 4000), @p118='?' (Size = 4000), @p119='?' (DbType = Int32), @p120='?' (Size = 4000), @p121='?' (Size = 4000), @p122='?' (Size = 4000), @p123='?' (DbType = Single), @p124='?' (DbType = Single), @p125='?' (DbType = Single), @p126='?' (DbType = Int32), @p127='?' (Size = 4000), @p128='?' (Size = 4000), @p129='?' (DbType = Int32), @p130='?' (Size = 4000), @p131='?' (Size = 4000), @p132='?' (Size = 4000), @p133='?' (DbType = Single), @p134='?' (DbType = Single), @p135='?' (DbType = Single), @p136='?' (DbType = Int32), @p137='?' (Size = 4000), @p138='?' (Size = 4000), @p139='?' (DbType = Int32), @p140='?' (Size = 4000), @p141='?' (Size = 4000), @p142='?' (Size = 4000), @p143='?' (DbType = Single), @p144='?' (DbType = Single), @p145='?' (DbType = Single), @p146='?' (DbType = Int32), @p147='?' (Size = 4000), @p148='?' (Size = 4000), @p149='?' (DbType = Int32), @p150='?' (Size = 4000), @p151='?' (Size = 4000), @p152='?' (Size = 4000), @p153='?' (DbType = Single), @p154='?' (DbType = Single), @p155='?' (DbType = Single), @p156='?' (DbType = Int32), @p157='?' (Size = 4000), @p158='?' (Size = 4000), @p159='?' (DbType = Int32), @p160='?' (Size = 4000), @p161='?' (Size = 4000), @p162='?' (Size = 4000), @p163='?' (DbType = Single), @p164='?' (DbType = Single), @p165='?' (DbType = Single), @p166='?' (DbType = Int32), @p167='?' (Size = 4000), @p168='?' (Size = 4000), @p169='?' (DbType = Int32), @p170='?' (Size = 4000), @p171='?' (Size = 4000), @p172='?' (Size = 4000), @p173='?' (DbType = Single), @p174='?' (DbType = Single), @p175='?' (DbType = Single), @p176='?' (DbType = Int32), @p177='?' (Size = 4000), @p178='?' (Size = 4000), @p179='?' (DbType = Int32), @p180='?' (Size = 4000), @p181='?' (Size = 4000), @p182='?' (Size = 4000), @p183='?' (DbType = Single), @p184='?' (DbType = Single), @p185='?' (DbType = Single), @p186='?' (DbType = Int32), @p187='?' (Size = 4000), @p188='?' (Size = 4000), @p189='?' (DbType = Int32), @p190='?' (Size = 4000), @p191='?' (Size = 4000), @p192='?' (Size = 4000), @p193='?' (DbType = Single), @p194='?' (DbType = Single), @p195='?' (DbType = Single), @p196='?' (DbType = Int32), @p197='?' (Size = 4000), @p198='?' (Size = 4000), @p199='?' (DbType = Int32), @p200='?' (Size = 4000), @p201='?' (Size = 4000), @p202='?' (Size = 4000), @p203='?' (DbType = Single), @p204='?' (DbType = Single), @p205='?' (DbType = Single), @p206='?' (DbType = Int32), @p207='?' (Size = 4000), @p208='?' (Size = 4000), @p209='?' (DbType = Int32), @p210='?' (Size = 4000), @p211='?' (Size = 4000), @p212='?' (Size = 4000), @p213='?' (DbType = Single), @p214='?' (DbType = Single), @p215='?' (DbType = Single), @p216='?' (DbType = Int32), @p217='?' (Size = 4000), @p218='?' (Size = 4000), @p219='?' (DbType = Int32), @p220='?' (Size = 4000), @p221='?' (Size = 4000), @p222='?' (Size = 4000), @p223='?' (DbType = Single), @p224='?' (DbType = Single), @p225='?' (DbType = Single), @p226='?' (DbType = Int32), @p227='?' (Size = 4000), @p228='?' (Size = 4000), @p229='?' (DbType = Int32), @p230='?' (Size = 4000), @p231='?' (Size = 4000), @p232='?' (Size = 4000), @p233='?' (DbType = Single), @p234='?' (DbType = Single), @p235='?' (DbType = Single), @p236='?' (DbType = Int32), @p237='?' (Size = 4000), @p238='?' (Size = 4000), @p239='?' (DbType = Int32), @p240='?' (Size = 4000), @p241='?' (Size = 4000), @p242='?' (Size = 4000), @p243='?' (DbType = Single), @p244='?' (DbType = Single), @p245='?' (DbType = Single), @p246='?' (DbType = Int32), @p247='?' (Size = 4000), @p248='?' (Size = 4000), @p249='?' (DbType = Int32), @p250='?' (Size = 4000), @p251='?' (Size = 4000), @p252='?' (Size = 4000), @p253='?' (DbType = Single), @p254='?' (DbType = Single), @p255='?' (DbType = Single), @p256='?' (DbType = Int32), @p257='?' (Size = 4000), @p258='?' (Size = 4000), @p259='?' (DbType = Int32), @p260='?' (Size = 4000), @p261='?' (Size = 4000), @p262='?' (Size = 4000), @p263='?' (DbType = Single), @p264='?' (DbType = Single), @p265='?' (DbType = Single), @p266='?' (DbType = Int32), @p267='?' (Size = 4000), @p268='?' (Size = 4000), @p269='?' (DbType = Int32), @p270='?' (Size = 4000), @p271='?' (Size = 4000), @p272='?' (Size = 4000), @p273='?' (DbType = Single), @p274='?' (DbType = Single), @p275='?' (DbType = Single), @p276='?' (DbType = Int32), @p277='?' (Size = 4000), @p278='?' (Size = 4000), @p279='?' (DbType = Int32), @p280='?' (Size = 4000), @p281='?' (Size = 4000), @p282='?' (Size = 4000), @p283='?' (DbType = Single), @p284='?' (DbType = Single), @p285='?' (DbType = Single), @p286='?' (DbType = Int32), @p287='?' (Size = 4000), @p288='?' (Size = 4000), @p289='?' (DbType = Int32), @p290='?' (Size = 4000), @p291='?' (Size = 4000), @p292='?' (Size = 4000), @p293='?' (DbType = Single), @p294='?' (DbType = Single), @p295='?' (DbType = Single), @p296='?' (DbType = Int32), @p297='?' (Size = 4000), @p298='?' (Size = 4000), @p299='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Products] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, 0),
+(@p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, 1),
+(@p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29, 2),
+(@p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39, 3),
+(@p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47, @p48, @p49, 4),
+(@p50, @p51, @p52, @p53, @p54, @p55, @p56, @p57, @p58, @p59, 5),
+(@p60, @p61, @p62, @p63, @p64, @p65, @p66, @p67, @p68, @p69, 6),
+(@p70, @p71, @p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79, 7),
+(@p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87, @p88, @p89, 8),
+(@p90, @p91, @p92, @p93, @p94, @p95, @p96, @p97, @p98, @p99, 9),
+(@p100, @p101, @p102, @p103, @p104, @p105, @p106, @p107, @p108, @p109, 10),
+(@p110, @p111, @p112, @p113, @p114, @p115, @p116, @p117, @p118, @p119, 11),
+(@p120, @p121, @p122, @p123, @p124, @p125, @p126, @p127, @p128, @p129, 12),
+(@p130, @p131, @p132, @p133, @p134, @p135, @p136, @p137, @p138, @p139, 13),
+(@p140, @p141, @p142, @p143, @p144, @p145, @p146, @p147, @p148, @p149, 14),
+(@p150, @p151, @p152, @p153, @p154, @p155, @p156, @p157, @p158, @p159, 15),
+(@p160, @p161, @p162, @p163, @p164, @p165, @p166, @p167, @p168, @p169, 16),
+(@p170, @p171, @p172, @p173, @p174, @p175, @p176, @p177, @p178, @p179, 17),
+(@p180, @p181, @p182, @p183, @p184, @p185, @p186, @p187, @p188, @p189, 18),
+(@p190, @p191, @p192, @p193, @p194, @p195, @p196, @p197, @p198, @p199, 19),
+(@p200, @p201, @p202, @p203, @p204, @p205, @p206, @p207, @p208, @p209, 20),
+(@p210, @p211, @p212, @p213, @p214, @p215, @p216, @p217, @p218, @p219, 21),
+(@p220, @p221, @p222, @p223, @p224, @p225, @p226, @p227, @p228, @p229, 22),
+(@p230, @p231, @p232, @p233, @p234, @p235, @p236, @p237, @p238, @p239, 23),
+(@p240, @p241, @p242, @p243, @p244, @p245, @p246, @p247, @p248, @p249, 24),
+(@p250, @p251, @p252, @p253, @p254, @p255, @p256, @p257, @p258, @p259, 25),
+(@p260, @p261, @p262, @p263, @p264, @p265, @p266, @p267, @p268, @p269, 26),
+(@p270, @p271, @p272, @p273, @p274, @p275, @p276, @p277, @p278, @p279, 27),
+(@p280, @p281, @p282, @p283, @p284, @p285, @p286, @p287, @p288, @p289, 28),
+(@p290, @p291, @p292, @p293, @p294, @p295, @p296, @p297, @p298, @p299, 29)) AS i ([Brand], [Category], [Description], [DiscountPercentage], [Price], [Rating], [Stock], [Thumbnail], [Title], [Views], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Brand], [Category], [Description], [DiscountPercentage], [Price], [Rating], [Stock], [Thumbnail], [Title], [Views])
+VALUES (i.[Brand], i.[Category], i.[Description], i.[DiscountPercentage], i.[Price], i.[Rating], i.[Stock], i.[Thumbnail], i.[Title], i.[Views])
+OUTPUT INSERTED.[Id], i._Position;
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (47ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Application is shutting down...
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (183ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [loremstoredb];
+Executed DbCommand (64ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [loremstoredb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Managers] (
+    [Id] uniqueidentifier NOT NULL,
+    [Username] nvarchar(max) NOT NULL,
+    [FirstName] nvarchar(max) NOT NULL,
+    [LastName] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Gender] nvarchar(1) NOT NULL,
+    [BirthDate] datetime2 NOT NULL,
+    [EmployedDate] datetime2 NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Managers] PRIMARY KEY ([Id])
+);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [Title] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Brand] nvarchar(max) NOT NULL,
+    [Category] nvarchar(max) NOT NULL,
+    [Thumbnail] nvarchar(max) NOT NULL,
+    [Rating] real NOT NULL,
+    [Price] real NOT NULL,
+    [DiscountPercentage] real NOT NULL,
+    [Stock] int NOT NULL,
+    [Views] int NOT NULL,
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id])
+);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [UserMessages] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] uniqueidentifier NOT NULL,
+    [MessageText] nvarchar(max) NOT NULL,
+    [DateSent] datetime2 NOT NULL,
+    CONSTRAINT [PK_UserMessages] PRIMARY KEY ([Id])
+);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] uniqueidentifier NOT NULL,
+    [Username] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Gender] nvarchar(1) NOT NULL,
+    [BirthDate] datetime2 NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Reviews] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] uniqueidentifier NOT NULL,
+    [ProductId] uniqueidentifier NOT NULL,
+    [Message] nvarchar(max) NOT NULL,
+    [Rating] int NOT NULL,
+    CONSTRAINT [PK_Reviews] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Reviews_Products_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Products] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Reviews_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Reviews_ProductId] ON [Reviews] ([ProductId]);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Reviews_UserId] ON [Reviews] ([UserId]);
+Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (56ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (17ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (17ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (17ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (16ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (200ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [loremstoredb];
+Executed DbCommand (64ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [loremstoredb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Managers] (
+    [Id] uniqueidentifier NOT NULL,
+    [Username] nvarchar(max) NOT NULL,
+    [FirstName] nvarchar(max) NOT NULL,
+    [LastName] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Gender] nvarchar(1) NOT NULL,
+    [BirthDate] datetime2 NOT NULL,
+    [EmployedDate] datetime2 NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Managers] PRIMARY KEY ([Id])
+);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [Title] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Brand] nvarchar(max) NOT NULL,
+    [Category] nvarchar(max) NOT NULL,
+    [Thumbnail] nvarchar(max) NOT NULL,
+    [Rating] real NOT NULL,
+    [Price] real NOT NULL,
+    [DiscountPercentage] real NOT NULL,
+    [Stock] int NOT NULL,
+    [Views] int NOT NULL,
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id])
+);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [UserMessages] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] uniqueidentifier NOT NULL,
+    [MessageText] nvarchar(max) NOT NULL,
+    [DateSent] datetime2 NOT NULL,
+    CONSTRAINT [PK_UserMessages] PRIMARY KEY ([Id])
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] uniqueidentifier NOT NULL,
+    [Username] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Gender] nvarchar(1) NOT NULL,
+    [BirthDate] datetime2 NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Reviews] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] uniqueidentifier NOT NULL,
+    [ProductId] uniqueidentifier NOT NULL,
+    [Message] nvarchar(max) NOT NULL,
+    [Rating] int NOT NULL,
+    CONSTRAINT [PK_Reviews] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Reviews_Products_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Products] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Reviews_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Reviews_ProductId] ON [Reviews] ([ProductId]);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Reviews_UserId] ON [Reviews] ([UserId]);
+Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (189ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [loremstoredb];
+Executed DbCommand (65ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [loremstoredb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Managers] (
+    [Id] int NOT NULL IDENTITY,
+    [Username] nvarchar(max) NOT NULL,
+    [FirstName] nvarchar(max) NOT NULL,
+    [LastName] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Gender] nvarchar(1) NOT NULL,
+    [BirthDate] datetime2 NOT NULL,
+    [EmployedDate] datetime2 NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Managers] PRIMARY KEY ([Id])
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] int NOT NULL IDENTITY,
+    [Title] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Brand] nvarchar(max) NOT NULL,
+    [Category] nvarchar(max) NOT NULL,
+    [Thumbnail] nvarchar(max) NOT NULL,
+    [Rating] real NOT NULL,
+    [Price] real NOT NULL,
+    [DiscountPercentage] real NOT NULL,
+    [Stock] int NOT NULL,
+    [Views] int NOT NULL,
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id])
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [UserMessages] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [MessageText] nvarchar(max) NOT NULL,
+    [DateSent] datetime2 NOT NULL,
+    CONSTRAINT [PK_UserMessages] PRIMARY KEY ([Id])
+);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Username] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Gender] nvarchar(1) NOT NULL,
+    [BirthDate] datetime2 NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Reviews] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [ProductId] int NOT NULL,
+    [Message] nvarchar(max) NOT NULL,
+    [Rating] int NOT NULL,
+    CONSTRAINT [PK_Reviews] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Reviews_Products_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Products] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Reviews_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Reviews_ProductId] ON [Reviews] ([ProductId]);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Reviews_UserId] ON [Reviews] ([UserId]);
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (31ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (28ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Single), @p4='?' (DbType = Single), @p5='?' (DbType = Single), @p6='?' (DbType = Int32), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Int32), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Single), @p14='?' (DbType = Single), @p15='?' (DbType = Single), @p16='?' (DbType = Int32), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Int32), @p20='?' (Size = 4000), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (DbType = Single), @p24='?' (DbType = Single), @p25='?' (DbType = Single), @p26='?' (DbType = Int32), @p27='?' (Size = 4000), @p28='?' (Size = 4000), @p29='?' (DbType = Int32), @p30='?' (Size = 4000), @p31='?' (Size = 4000), @p32='?' (Size = 4000), @p33='?' (DbType = Single), @p34='?' (DbType = Single), @p35='?' (DbType = Single), @p36='?' (DbType = Int32), @p37='?' (Size = 4000), @p38='?' (Size = 4000), @p39='?' (DbType = Int32), @p40='?' (Size = 4000), @p41='?' (Size = 4000), @p42='?' (Size = 4000), @p43='?' (DbType = Single), @p44='?' (DbType = Single), @p45='?' (DbType = Single), @p46='?' (DbType = Int32), @p47='?' (Size = 4000), @p48='?' (Size = 4000), @p49='?' (DbType = Int32), @p50='?' (Size = 4000), @p51='?' (Size = 4000), @p52='?' (Size = 4000), @p53='?' (DbType = Single), @p54='?' (DbType = Single), @p55='?' (DbType = Single), @p56='?' (DbType = Int32), @p57='?' (Size = 4000), @p58='?' (Size = 4000), @p59='?' (DbType = Int32), @p60='?' (Size = 4000), @p61='?' (Size = 4000), @p62='?' (Size = 4000), @p63='?' (DbType = Single), @p64='?' (DbType = Single), @p65='?' (DbType = Single), @p66='?' (DbType = Int32), @p67='?' (Size = 4000), @p68='?' (Size = 4000), @p69='?' (DbType = Int32), @p70='?' (Size = 4000), @p71='?' (Size = 4000), @p72='?' (Size = 4000), @p73='?' (DbType = Single), @p74='?' (DbType = Single), @p75='?' (DbType = Single), @p76='?' (DbType = Int32), @p77='?' (Size = 4000), @p78='?' (Size = 4000), @p79='?' (DbType = Int32), @p80='?' (Size = 4000), @p81='?' (Size = 4000), @p82='?' (Size = 4000), @p83='?' (DbType = Single), @p84='?' (DbType = Single), @p85='?' (DbType = Single), @p86='?' (DbType = Int32), @p87='?' (Size = 4000), @p88='?' (Size = 4000), @p89='?' (DbType = Int32), @p90='?' (Size = 4000), @p91='?' (Size = 4000), @p92='?' (Size = 4000), @p93='?' (DbType = Single), @p94='?' (DbType = Single), @p95='?' (DbType = Single), @p96='?' (DbType = Int32), @p97='?' (Size = 4000), @p98='?' (Size = 4000), @p99='?' (DbType = Int32), @p100='?' (Size = 4000), @p101='?' (Size = 4000), @p102='?' (Size = 4000), @p103='?' (DbType = Single), @p104='?' (DbType = Single), @p105='?' (DbType = Single), @p106='?' (DbType = Int32), @p107='?' (Size = 4000), @p108='?' (Size = 4000), @p109='?' (DbType = Int32), @p110='?' (Size = 4000), @p111='?' (Size = 4000), @p112='?' (Size = 4000), @p113='?' (DbType = Single), @p114='?' (DbType = Single), @p115='?' (DbType = Single), @p116='?' (DbType = Int32), @p117='?' (Size = 4000), @p118='?' (Size = 4000), @p119='?' (DbType = Int32), @p120='?' (Size = 4000), @p121='?' (Size = 4000), @p122='?' (Size = 4000), @p123='?' (DbType = Single), @p124='?' (DbType = Single), @p125='?' (DbType = Single), @p126='?' (DbType = Int32), @p127='?' (Size = 4000), @p128='?' (Size = 4000), @p129='?' (DbType = Int32), @p130='?' (Size = 4000), @p131='?' (Size = 4000), @p132='?' (Size = 4000), @p133='?' (DbType = Single), @p134='?' (DbType = Single), @p135='?' (DbType = Single), @p136='?' (DbType = Int32), @p137='?' (Size = 4000), @p138='?' (Size = 4000), @p139='?' (DbType = Int32), @p140='?' (Size = 4000), @p141='?' (Size = 4000), @p142='?' (Size = 4000), @p143='?' (DbType = Single), @p144='?' (DbType = Single), @p145='?' (DbType = Single), @p146='?' (DbType = Int32), @p147='?' (Size = 4000), @p148='?' (Size = 4000), @p149='?' (DbType = Int32), @p150='?' (Size = 4000), @p151='?' (Size = 4000), @p152='?' (Size = 4000), @p153='?' (DbType = Single), @p154='?' (DbType = Single), @p155='?' (DbType = Single), @p156='?' (DbType = Int32), @p157='?' (Size = 4000), @p158='?' (Size = 4000), @p159='?' (DbType = Int32), @p160='?' (Size = 4000), @p161='?' (Size = 4000), @p162='?' (Size = 4000), @p163='?' (DbType = Single), @p164='?' (DbType = Single), @p165='?' (DbType = Single), @p166='?' (DbType = Int32), @p167='?' (Size = 4000), @p168='?' (Size = 4000), @p169='?' (DbType = Int32), @p170='?' (Size = 4000), @p171='?' (Size = 4000), @p172='?' (Size = 4000), @p173='?' (DbType = Single), @p174='?' (DbType = Single), @p175='?' (DbType = Single), @p176='?' (DbType = Int32), @p177='?' (Size = 4000), @p178='?' (Size = 4000), @p179='?' (DbType = Int32), @p180='?' (Size = 4000), @p181='?' (Size = 4000), @p182='?' (Size = 4000), @p183='?' (DbType = Single), @p184='?' (DbType = Single), @p185='?' (DbType = Single), @p186='?' (DbType = Int32), @p187='?' (Size = 4000), @p188='?' (Size = 4000), @p189='?' (DbType = Int32), @p190='?' (Size = 4000), @p191='?' (Size = 4000), @p192='?' (Size = 4000), @p193='?' (DbType = Single), @p194='?' (DbType = Single), @p195='?' (DbType = Single), @p196='?' (DbType = Int32), @p197='?' (Size = 4000), @p198='?' (Size = 4000), @p199='?' (DbType = Int32), @p200='?' (Size = 4000), @p201='?' (Size = 4000), @p202='?' (Size = 4000), @p203='?' (DbType = Single), @p204='?' (DbType = Single), @p205='?' (DbType = Single), @p206='?' (DbType = Int32), @p207='?' (Size = 4000), @p208='?' (Size = 4000), @p209='?' (DbType = Int32), @p210='?' (Size = 4000), @p211='?' (Size = 4000), @p212='?' (Size = 4000), @p213='?' (DbType = Single), @p214='?' (DbType = Single), @p215='?' (DbType = Single), @p216='?' (DbType = Int32), @p217='?' (Size = 4000), @p218='?' (Size = 4000), @p219='?' (DbType = Int32), @p220='?' (Size = 4000), @p221='?' (Size = 4000), @p222='?' (Size = 4000), @p223='?' (DbType = Single), @p224='?' (DbType = Single), @p225='?' (DbType = Single), @p226='?' (DbType = Int32), @p227='?' (Size = 4000), @p228='?' (Size = 4000), @p229='?' (DbType = Int32), @p230='?' (Size = 4000), @p231='?' (Size = 4000), @p232='?' (Size = 4000), @p233='?' (DbType = Single), @p234='?' (DbType = Single), @p235='?' (DbType = Single), @p236='?' (DbType = Int32), @p237='?' (Size = 4000), @p238='?' (Size = 4000), @p239='?' (DbType = Int32), @p240='?' (Size = 4000), @p241='?' (Size = 4000), @p242='?' (Size = 4000), @p243='?' (DbType = Single), @p244='?' (DbType = Single), @p245='?' (DbType = Single), @p246='?' (DbType = Int32), @p247='?' (Size = 4000), @p248='?' (Size = 4000), @p249='?' (DbType = Int32), @p250='?' (Size = 4000), @p251='?' (Size = 4000), @p252='?' (Size = 4000), @p253='?' (DbType = Single), @p254='?' (DbType = Single), @p255='?' (DbType = Single), @p256='?' (DbType = Int32), @p257='?' (Size = 4000), @p258='?' (Size = 4000), @p259='?' (DbType = Int32), @p260='?' (Size = 4000), @p261='?' (Size = 4000), @p262='?' (Size = 4000), @p263='?' (DbType = Single), @p264='?' (DbType = Single), @p265='?' (DbType = Single), @p266='?' (DbType = Int32), @p267='?' (Size = 4000), @p268='?' (Size = 4000), @p269='?' (DbType = Int32), @p270='?' (Size = 4000), @p271='?' (Size = 4000), @p272='?' (Size = 4000), @p273='?' (DbType = Single), @p274='?' (DbType = Single), @p275='?' (DbType = Single), @p276='?' (DbType = Int32), @p277='?' (Size = 4000), @p278='?' (Size = 4000), @p279='?' (DbType = Int32), @p280='?' (Size = 4000), @p281='?' (Size = 4000), @p282='?' (Size = 4000), @p283='?' (DbType = Single), @p284='?' (DbType = Single), @p285='?' (DbType = Single), @p286='?' (DbType = Int32), @p287='?' (Size = 4000), @p288='?' (Size = 4000), @p289='?' (DbType = Int32), @p290='?' (Size = 4000), @p291='?' (Size = 4000), @p292='?' (Size = 4000), @p293='?' (DbType = Single), @p294='?' (DbType = Single), @p295='?' (DbType = Single), @p296='?' (DbType = Int32), @p297='?' (Size = 4000), @p298='?' (Size = 4000), @p299='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Products] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, 0),
+(@p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, 1),
+(@p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29, 2),
+(@p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39, 3),
+(@p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47, @p48, @p49, 4),
+(@p50, @p51, @p52, @p53, @p54, @p55, @p56, @p57, @p58, @p59, 5),
+(@p60, @p61, @p62, @p63, @p64, @p65, @p66, @p67, @p68, @p69, 6),
+(@p70, @p71, @p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79, 7),
+(@p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87, @p88, @p89, 8),
+(@p90, @p91, @p92, @p93, @p94, @p95, @p96, @p97, @p98, @p99, 9),
+(@p100, @p101, @p102, @p103, @p104, @p105, @p106, @p107, @p108, @p109, 10),
+(@p110, @p111, @p112, @p113, @p114, @p115, @p116, @p117, @p118, @p119, 11),
+(@p120, @p121, @p122, @p123, @p124, @p125, @p126, @p127, @p128, @p129, 12),
+(@p130, @p131, @p132, @p133, @p134, @p135, @p136, @p137, @p138, @p139, 13),
+(@p140, @p141, @p142, @p143, @p144, @p145, @p146, @p147, @p148, @p149, 14),
+(@p150, @p151, @p152, @p153, @p154, @p155, @p156, @p157, @p158, @p159, 15),
+(@p160, @p161, @p162, @p163, @p164, @p165, @p166, @p167, @p168, @p169, 16),
+(@p170, @p171, @p172, @p173, @p174, @p175, @p176, @p177, @p178, @p179, 17),
+(@p180, @p181, @p182, @p183, @p184, @p185, @p186, @p187, @p188, @p189, 18),
+(@p190, @p191, @p192, @p193, @p194, @p195, @p196, @p197, @p198, @p199, 19),
+(@p200, @p201, @p202, @p203, @p204, @p205, @p206, @p207, @p208, @p209, 20),
+(@p210, @p211, @p212, @p213, @p214, @p215, @p216, @p217, @p218, @p219, 21),
+(@p220, @p221, @p222, @p223, @p224, @p225, @p226, @p227, @p228, @p229, 22),
+(@p230, @p231, @p232, @p233, @p234, @p235, @p236, @p237, @p238, @p239, 23),
+(@p240, @p241, @p242, @p243, @p244, @p245, @p246, @p247, @p248, @p249, 24),
+(@p250, @p251, @p252, @p253, @p254, @p255, @p256, @p257, @p258, @p259, 25),
+(@p260, @p261, @p262, @p263, @p264, @p265, @p266, @p267, @p268, @p269, 26),
+(@p270, @p271, @p272, @p273, @p274, @p275, @p276, @p277, @p278, @p279, 27),
+(@p280, @p281, @p282, @p283, @p284, @p285, @p286, @p287, @p288, @p289, 28),
+(@p290, @p291, @p292, @p293, @p294, @p295, @p296, @p297, @p298, @p299, 29)) AS i ([Brand], [Category], [Description], [DiscountPercentage], [Price], [Rating], [Stock], [Thumbnail], [Title], [Views], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Brand], [Category], [Description], [DiscountPercentage], [Price], [Rating], [Stock], [Thumbnail], [Title], [Views])
+VALUES (i.[Brand], i.[Category], i.[Description], i.[DiscountPercentage], i.[Price], i.[Rating], i.[Stock], i.[Thumbnail], i.[Title], i.[Views])
+OUTPUT INSERTED.[Id], i._Position;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (220ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [loremstoredb];
+Executed DbCommand (66ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [loremstoredb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Managers] (
+    [Id] uniqueidentifier NOT NULL,
+    [Username] nvarchar(max) NOT NULL,
+    [FirstName] nvarchar(max) NOT NULL,
+    [LastName] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Gender] nvarchar(1) NOT NULL,
+    [BirthDate] datetime2 NOT NULL,
+    [EmployedDate] datetime2 NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Managers] PRIMARY KEY ([Id])
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [Title] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Brand] nvarchar(max) NOT NULL,
+    [Category] nvarchar(max) NOT NULL,
+    [Thumbnail] nvarchar(max) NOT NULL,
+    [Rating] real NOT NULL,
+    [Price] real NOT NULL,
+    [DiscountPercentage] real NOT NULL,
+    [Stock] int NOT NULL,
+    [Views] int NOT NULL,
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id])
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [UserMessages] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] uniqueidentifier NOT NULL,
+    [MessageText] nvarchar(max) NOT NULL,
+    [DateSent] datetime2 NOT NULL,
+    CONSTRAINT [PK_UserMessages] PRIMARY KEY ([Id])
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] uniqueidentifier NOT NULL,
+    [Username] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Gender] nvarchar(1) NOT NULL,
+    [BirthDate] datetime2 NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Reviews] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [ProductId] uniqueidentifier NOT NULL,
+    [Message] nvarchar(max) NOT NULL,
+    [Rating] int NOT NULL,
+    CONSTRAINT [PK_Reviews] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Reviews_Products_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Products] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Reviews_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Reviews_ProductId] ON [Reviews] ([ProductId]);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Reviews_UserId] ON [Reviews] ([UserId]);
+Executed DbCommand (21ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (41ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (29ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Single), @p5='?' (DbType = Single), @p6='?' (DbType = Single), @p7='?' (DbType = Int32), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Int32), @p11='?' (DbType = Guid), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (DbType = Single), @p16='?' (DbType = Single), @p17='?' (DbType = Single), @p18='?' (DbType = Int32), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (DbType = Int32), @p22='?' (DbType = Guid), @p23='?' (Size = 4000), @p24='?' (Size = 4000), @p25='?' (Size = 4000), @p26='?' (DbType = Single), @p27='?' (DbType = Single), @p28='?' (DbType = Single), @p29='?' (DbType = Int32), @p30='?' (Size = 4000), @p31='?' (Size = 4000), @p32='?' (DbType = Int32), @p33='?' (DbType = Guid), @p34='?' (Size = 4000), @p35='?' (Size = 4000), @p36='?' (Size = 4000), @p37='?' (DbType = Single), @p38='?' (DbType = Single), @p39='?' (DbType = Single), @p40='?' (DbType = Int32), @p41='?' (Size = 4000), @p42='?' (Size = 4000), @p43='?' (DbType = Int32), @p44='?' (DbType = Guid), @p45='?' (Size = 4000), @p46='?' (Size = 4000), @p47='?' (Size = 4000), @p48='?' (DbType = Single), @p49='?' (DbType = Single), @p50='?' (DbType = Single), @p51='?' (DbType = Int32), @p52='?' (Size = 4000), @p53='?' (Size = 4000), @p54='?' (DbType = Int32), @p55='?' (DbType = Guid), @p56='?' (Size = 4000), @p57='?' (Size = 4000), @p58='?' (Size = 4000), @p59='?' (DbType = Single), @p60='?' (DbType = Single), @p61='?' (DbType = Single), @p62='?' (DbType = Int32), @p63='?' (Size = 4000), @p64='?' (Size = 4000), @p65='?' (DbType = Int32), @p66='?' (DbType = Guid), @p67='?' (Size = 4000), @p68='?' (Size = 4000), @p69='?' (Size = 4000), @p70='?' (DbType = Single), @p71='?' (DbType = Single), @p72='?' (DbType = Single), @p73='?' (DbType = Int32), @p74='?' (Size = 4000), @p75='?' (Size = 4000), @p76='?' (DbType = Int32), @p77='?' (DbType = Guid), @p78='?' (Size = 4000), @p79='?' (Size = 4000), @p80='?' (Size = 4000), @p81='?' (DbType = Single), @p82='?' (DbType = Single), @p83='?' (DbType = Single), @p84='?' (DbType = Int32), @p85='?' (Size = 4000), @p86='?' (Size = 4000), @p87='?' (DbType = Int32), @p88='?' (DbType = Guid), @p89='?' (Size = 4000), @p90='?' (Size = 4000), @p91='?' (Size = 4000), @p92='?' (DbType = Single), @p93='?' (DbType = Single), @p94='?' (DbType = Single), @p95='?' (DbType = Int32), @p96='?' (Size = 4000), @p97='?' (Size = 4000), @p98='?' (DbType = Int32), @p99='?' (DbType = Guid), @p100='?' (Size = 4000), @p101='?' (Size = 4000), @p102='?' (Size = 4000), @p103='?' (DbType = Single), @p104='?' (DbType = Single), @p105='?' (DbType = Single), @p106='?' (DbType = Int32), @p107='?' (Size = 4000), @p108='?' (Size = 4000), @p109='?' (DbType = Int32), @p110='?' (DbType = Guid), @p111='?' (Size = 4000), @p112='?' (Size = 4000), @p113='?' (Size = 4000), @p114='?' (DbType = Single), @p115='?' (DbType = Single), @p116='?' (DbType = Single), @p117='?' (DbType = Int32), @p118='?' (Size = 4000), @p119='?' (Size = 4000), @p120='?' (DbType = Int32), @p121='?' (DbType = Guid), @p122='?' (Size = 4000), @p123='?' (Size = 4000), @p124='?' (Size = 4000), @p125='?' (DbType = Single), @p126='?' (DbType = Single), @p127='?' (DbType = Single), @p128='?' (DbType = Int32), @p129='?' (Size = 4000), @p130='?' (Size = 4000), @p131='?' (DbType = Int32), @p132='?' (DbType = Guid), @p133='?' (Size = 4000), @p134='?' (Size = 4000), @p135='?' (Size = 4000), @p136='?' (DbType = Single), @p137='?' (DbType = Single), @p138='?' (DbType = Single), @p139='?' (DbType = Int32), @p140='?' (Size = 4000), @p141='?' (Size = 4000), @p142='?' (DbType = Int32), @p143='?' (DbType = Guid), @p144='?' (Size = 4000), @p145='?' (Size = 4000), @p146='?' (Size = 4000), @p147='?' (DbType = Single), @p148='?' (DbType = Single), @p149='?' (DbType = Single), @p150='?' (DbType = Int32), @p151='?' (Size = 4000), @p152='?' (Size = 4000), @p153='?' (DbType = Int32), @p154='?' (DbType = Guid), @p155='?' (Size = 4000), @p156='?' (Size = 4000), @p157='?' (Size = 4000), @p158='?' (DbType = Single), @p159='?' (DbType = Single), @p160='?' (DbType = Single), @p161='?' (DbType = Int32), @p162='?' (Size = 4000), @p163='?' (Size = 4000), @p164='?' (DbType = Int32), @p165='?' (DbType = Guid), @p166='?' (Size = 4000), @p167='?' (Size = 4000), @p168='?' (Size = 4000), @p169='?' (DbType = Single), @p170='?' (DbType = Single), @p171='?' (DbType = Single), @p172='?' (DbType = Int32), @p173='?' (Size = 4000), @p174='?' (Size = 4000), @p175='?' (DbType = Int32), @p176='?' (DbType = Guid), @p177='?' (Size = 4000), @p178='?' (Size = 4000), @p179='?' (Size = 4000), @p180='?' (DbType = Single), @p181='?' (DbType = Single), @p182='?' (DbType = Single), @p183='?' (DbType = Int32), @p184='?' (Size = 4000), @p185='?' (Size = 4000), @p186='?' (DbType = Int32), @p187='?' (DbType = Guid), @p188='?' (Size = 4000), @p189='?' (Size = 4000), @p190='?' (Size = 4000), @p191='?' (DbType = Single), @p192='?' (DbType = Single), @p193='?' (DbType = Single), @p194='?' (DbType = Int32), @p195='?' (Size = 4000), @p196='?' (Size = 4000), @p197='?' (DbType = Int32), @p198='?' (DbType = Guid), @p199='?' (Size = 4000), @p200='?' (Size = 4000), @p201='?' (Size = 4000), @p202='?' (DbType = Single), @p203='?' (DbType = Single), @p204='?' (DbType = Single), @p205='?' (DbType = Int32), @p206='?' (Size = 4000), @p207='?' (Size = 4000), @p208='?' (DbType = Int32), @p209='?' (DbType = Guid), @p210='?' (Size = 4000), @p211='?' (Size = 4000), @p212='?' (Size = 4000), @p213='?' (DbType = Single), @p214='?' (DbType = Single), @p215='?' (DbType = Single), @p216='?' (DbType = Int32), @p217='?' (Size = 4000), @p218='?' (Size = 4000), @p219='?' (DbType = Int32), @p220='?' (DbType = Guid), @p221='?' (Size = 4000), @p222='?' (Size = 4000), @p223='?' (Size = 4000), @p224='?' (DbType = Single), @p225='?' (DbType = Single), @p226='?' (DbType = Single), @p227='?' (DbType = Int32), @p228='?' (Size = 4000), @p229='?' (Size = 4000), @p230='?' (DbType = Int32), @p231='?' (DbType = Guid), @p232='?' (Size = 4000), @p233='?' (Size = 4000), @p234='?' (Size = 4000), @p235='?' (DbType = Single), @p236='?' (DbType = Single), @p237='?' (DbType = Single), @p238='?' (DbType = Int32), @p239='?' (Size = 4000), @p240='?' (Size = 4000), @p241='?' (DbType = Int32), @p242='?' (DbType = Guid), @p243='?' (Size = 4000), @p244='?' (Size = 4000), @p245='?' (Size = 4000), @p246='?' (DbType = Single), @p247='?' (DbType = Single), @p248='?' (DbType = Single), @p249='?' (DbType = Int32), @p250='?' (Size = 4000), @p251='?' (Size = 4000), @p252='?' (DbType = Int32), @p253='?' (DbType = Guid), @p254='?' (Size = 4000), @p255='?' (Size = 4000), @p256='?' (Size = 4000), @p257='?' (DbType = Single), @p258='?' (DbType = Single), @p259='?' (DbType = Single), @p260='?' (DbType = Int32), @p261='?' (Size = 4000), @p262='?' (Size = 4000), @p263='?' (DbType = Int32), @p264='?' (DbType = Guid), @p265='?' (Size = 4000), @p266='?' (Size = 4000), @p267='?' (Size = 4000), @p268='?' (DbType = Single), @p269='?' (DbType = Single), @p270='?' (DbType = Single), @p271='?' (DbType = Int32), @p272='?' (Size = 4000), @p273='?' (Size = 4000), @p274='?' (DbType = Int32), @p275='?' (DbType = Guid), @p276='?' (Size = 4000), @p277='?' (Size = 4000), @p278='?' (Size = 4000), @p279='?' (DbType = Single), @p280='?' (DbType = Single), @p281='?' (DbType = Single), @p282='?' (DbType = Int32), @p283='?' (Size = 4000), @p284='?' (Size = 4000), @p285='?' (DbType = Int32), @p286='?' (DbType = Guid), @p287='?' (Size = 4000), @p288='?' (Size = 4000), @p289='?' (Size = 4000), @p290='?' (DbType = Single), @p291='?' (DbType = Single), @p292='?' (DbType = Single), @p293='?' (DbType = Int32), @p294='?' (Size = 4000), @p295='?' (Size = 4000), @p296='?' (DbType = Int32), @p297='?' (DbType = Guid), @p298='?' (Size = 4000), @p299='?' (Size = 4000), @p300='?' (Size = 4000), @p301='?' (DbType = Single), @p302='?' (DbType = Single), @p303='?' (DbType = Single), @p304='?' (DbType = Int32), @p305='?' (Size = 4000), @p306='?' (Size = 4000), @p307='?' (DbType = Int32), @p308='?' (DbType = Guid), @p309='?' (Size = 4000), @p310='?' (Size = 4000), @p311='?' (Size = 4000), @p312='?' (DbType = Single), @p313='?' (DbType = Single), @p314='?' (DbType = Single), @p315='?' (DbType = Int32), @p316='?' (Size = 4000), @p317='?' (Size = 4000), @p318='?' (DbType = Int32), @p319='?' (DbType = Guid), @p320='?' (Size = 4000), @p321='?' (Size = 4000), @p322='?' (Size = 4000), @p323='?' (DbType = Single), @p324='?' (DbType = Single), @p325='?' (DbType = Single), @p326='?' (DbType = Int32), @p327='?' (Size = 4000), @p328='?' (Size = 4000), @p329='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [Brand], [Category], [Description], [DiscountPercentage], [Price], [Rating], [Stock], [Thumbnail], [Title], [Views])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10),
+(@p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21),
+(@p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32),
+(@p33, @p34, @p35, @p36, @p37, @p38, @p39, @p40, @p41, @p42, @p43),
+(@p44, @p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52, @p53, @p54),
+(@p55, @p56, @p57, @p58, @p59, @p60, @p61, @p62, @p63, @p64, @p65),
+(@p66, @p67, @p68, @p69, @p70, @p71, @p72, @p73, @p74, @p75, @p76),
+(@p77, @p78, @p79, @p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87),
+(@p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95, @p96, @p97, @p98),
+(@p99, @p100, @p101, @p102, @p103, @p104, @p105, @p106, @p107, @p108, @p109),
+(@p110, @p111, @p112, @p113, @p114, @p115, @p116, @p117, @p118, @p119, @p120),
+(@p121, @p122, @p123, @p124, @p125, @p126, @p127, @p128, @p129, @p130, @p131),
+(@p132, @p133, @p134, @p135, @p136, @p137, @p138, @p139, @p140, @p141, @p142),
+(@p143, @p144, @p145, @p146, @p147, @p148, @p149, @p150, @p151, @p152, @p153),
+(@p154, @p155, @p156, @p157, @p158, @p159, @p160, @p161, @p162, @p163, @p164),
+(@p165, @p166, @p167, @p168, @p169, @p170, @p171, @p172, @p173, @p174, @p175),
+(@p176, @p177, @p178, @p179, @p180, @p181, @p182, @p183, @p184, @p185, @p186),
+(@p187, @p188, @p189, @p190, @p191, @p192, @p193, @p194, @p195, @p196, @p197),
+(@p198, @p199, @p200, @p201, @p202, @p203, @p204, @p205, @p206, @p207, @p208),
+(@p209, @p210, @p211, @p212, @p213, @p214, @p215, @p216, @p217, @p218, @p219),
+(@p220, @p221, @p222, @p223, @p224, @p225, @p226, @p227, @p228, @p229, @p230),
+(@p231, @p232, @p233, @p234, @p235, @p236, @p237, @p238, @p239, @p240, @p241),
+(@p242, @p243, @p244, @p245, @p246, @p247, @p248, @p249, @p250, @p251, @p252),
+(@p253, @p254, @p255, @p256, @p257, @p258, @p259, @p260, @p261, @p262, @p263),
+(@p264, @p265, @p266, @p267, @p268, @p269, @p270, @p271, @p272, @p273, @p274),
+(@p275, @p276, @p277, @p278, @p279, @p280, @p281, @p282, @p283, @p284, @p285),
+(@p286, @p287, @p288, @p289, @p290, @p291, @p292, @p293, @p294, @p295, @p296),
+(@p297, @p298, @p299, @p300, @p301, @p302, @p303, @p304, @p305, @p306, @p307),
+(@p308, @p309, @p310, @p311, @p312, @p313, @p314, @p315, @p316, @p317, @p318),
+(@p319, @p320, @p321, @p322, @p323, @p324, @p325, @p326, @p327, @p328, @p329);
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (19ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (31ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (30ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (30ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (29ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (31ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (32ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (29ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+An unhandled exception has occurred while executing the request.
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (31ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]

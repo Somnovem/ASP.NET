@@ -1,0 +1,74 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<style>
+    body {
+        background-image: url('imgs/rosa_window.jpg'); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    .center-content {
+        background-color: black;
+        color: white;
+        padding: 20px;
+        height: 35vh;
+    }
+
+    .orange-title {
+        color: orange;
+        font-size: 24px;
+    }
+
+    .big-title {
+        font-size: 36px;
+        margin-top: 10px;
+    }
+
+    .description {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .button-container {
+        margin-top: 20px;
+        display:flex;
+        justify-content:space-between;
+    }
+
+    .btn-watch-live {
+        background-color: blue;
+        color: white;
+        text-decoration:none;
+    }
+
+    .btn-learn-more {
+        background-color: white;
+        color: blue;
+        text-decoration: none;
+    }
+</style>
+
+<div class="container-fluid h-100">
+    <div class="row d-flex justify-content-center align-items-center">
+        <img src="imgs/mba_logo.jpg" style="height:200px;width:auto;" />
+    </div>
+    <div class="row h-100">
+        <div class="col-md-4 offset-md-1 center-content d-flex flex-column justify-content-center mt-5">
+            <div class="orange-title">CELEBRATING SEA OTTERS</div>
+            <div class="big-title">Sea Otter Awareness Week!</div>
+            <div class="description">Get ready for an overdose of adorable. Immerse yourself in all things otter as we celebrate these furry eco warriors during our annual Sea Otter Awareness Week.</div>
+            <div class="button-container">
+                <a href="/livecam" class="btn btn-watch-live">
+                    <i class="fa fa-video-camera" style="margin-right:7px;"></i>Watch the Live Cam
+                </a>
+                <a href="/otters" class="btn btn-learn-more">
+                    <i class="fa fa-calendar" style="margin-right:7px;"></i>Learn more
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Homework_23
+build_property.RootNamespace = Homework_23
+build_property.ProjectDir = D:\Projects\ASP.NET_Learning\ASP.NET\Homework_23\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Projects\ASP.NET_Learning\ASP.NET\Homework_23
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Projects/ASP.NET_Learning/ASP.NET/Homework_23/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/ASP.NET_Learning/ASP.NET/Homework_23/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/ASP.NET_Learning/ASP.NET/Homework_23/Pages/Livecam.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGl2ZWNhbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/ASP.NET_Learning/ASP.NET/Homework_23/Pages/Map.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/ASP.NET_Learning/ASP.NET/Homework_23/Pages/Otters.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3R0ZXJzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/ASP.NET_Learning/ASP.NET/Homework_23/Pages/Pollution.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9sbHV0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/ASP.NET_Learning/ASP.NET/Homework_23/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/ASP.NET_Learning/ASP.NET/Homework_23/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/ASP.NET_Learning/ASP.NET/Homework_23/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-mcrghaudiw
+
+[D:/Projects/ASP.NET_Learning/ASP.NET/Homework_23/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-31shji1uzk
+
+[D:/Projects/ASP.NET_Learning/ASP.NET/Homework_23/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/ASP.NET_Learning/ASP.NET/Homework_23/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

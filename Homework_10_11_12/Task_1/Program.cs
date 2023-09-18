@@ -20,7 +20,7 @@ builder.Services.AddAuthentication("LoremIpsumAuthScheme")
 
 builder.Services.AddControllersWithViews(options => options.Filters.Add<CustomExceptionFilterAttribute>());
 
-string logsPath = Path.Combine(Directory.GetCurrentDirectory(),"Logs");
+string logsPath = Path.Combine(Directory.GetCurrentDirectory(), "Logs");
 
 if (!Directory.Exists(logsPath))
 {

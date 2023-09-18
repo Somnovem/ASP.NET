@@ -3,6 +3,7 @@
     public class PersonLogin
     {
         public bool IsLoggedIn { get; set; }
+        public bool IsLoggingOut { get; set; }
         public bool IsLogin { get; set; }
         public bool IsManager { get; set; }
         public string Username { get; set; }

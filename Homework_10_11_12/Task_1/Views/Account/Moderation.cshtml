@@ -54,41 +54,41 @@
     </form>
 </div>
 
+<div style="max-height: 300px; overflow-y: auto;">
+    <div>
+        <table class="table table-bordered text-center">
+            <thead>
+            <tr class="text-center">
+                <th>Username</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Birthday</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model.Users)
+                    {
+                        <tr>
+                            <td class="user-id" style="display: none">@user.Id</td>
+                            <td class="user-username">@user.Username</td>
+                            <td class="user-email">@user.Email</td>
+                            <td class="user-gender">@user.Gender</td>
+                            <td class="user-birthdate">@user.BirthDate.ToString("yyyy-MM-dd")</td>
+                            <td class="d-flex justify-content-around">
+                                <button class="btn btn-primary btn-change-user">Change</button>
+                                <form method="post" onsubmit="return confirm('Do you really want to delete {@user.Username} ?');">
+                                    <input type="hidden" asp-for="Id" value="@user.Id">
+                                    <input type="hidden" asp-for="IsDeleting" value="true">
+                                    <button type="submit" class="btn btn-danger btn-delete-user">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+            </tbody>
+        </table>
+    </div>
+</div>
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Gender</th>
-            <th>Birthday</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (Model.Users != null)
-        {
-            @foreach (var user in Model.Users)
-            {
-                <tr>
-                    <td class="user-id">@user.Id</td>
-                    <td class="user-username">@user.Username</td>
-                    <td class="user-email">@user.Email</td>
-                    <td class="user-gender">@user.Gender</td>
-                    <td class="user-birthdate">@user.BirthDate.ToString("yyyy-MM-dd")</td>
-                    <td><button class="btn btn-primary btn-change-user">Change</button></td>
-                    <td>
-                        <form method="post" onsubmit="return confirm('Do you really want to delete {@user.Username} ?');">
-                            <input type="hidden" asp-for="Id" value="@user.Id">
-                            <input type="hidden" asp-for="IsDeleting" value="true">
-                            <button type="submit" class="btn btn-danger btn-delete-user">Delete</button>
-                        </form>
-                    </td>
-                </tr>
-            }
-        }
-    </tbody>
-</table>
-
-<script src="~/js/moderation.js" asp-append-version="true" />
+<script src="~/js/moderation.js" asp-append-version="true"></script>
 

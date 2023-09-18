@@ -14,12 +14,17 @@ namespace Task_1.Controllers
     [RequestTimeFilter]
     public class HomeController : Controller
     {
-        ApplicationContext _context;
+        private readonly ApplicationContext _context;
+        
         private readonly ILogger<HomeController> _logger;
+
+        private int _pageItemCount;
+
         public HomeController(ApplicationContext db,ILogger<HomeController> logger)
         {
             _logger = logger;
             _context = db;
+            _pageItemCount = 12;
         }
 
         [Route("")]
@@ -41,7 +46,7 @@ namespace Task_1.Controllers
         }
 
         [NonAction]
-        private IActionResult FormDetailsPage(int id, string name, int rating, int page, SortState sortOrder)
+        private IActionResult FormDetailsPage(Guid id, string name, int rating, int page, SortState sortOrder)
         {
             int reviewCount = 3;
             
@@ -83,33 +88,32 @@ namespace Task_1.Controllers
             return View(model);
         }
 
-        [Route("Details/{id:int}")]
-        [IdStabilizer]
+        [Route("Details/{id}")]
         [HttpGet]
-        public IActionResult Details(int id,string name, int rating = 0, int page = 1, SortState sortOrder = SortState.NameAsc)
+        public IActionResult Details(Guid id,string name, int rating = 0, int page = 1, SortState sortOrder = SortState.NameAsc)
         {
             if (!HttpContext.Session.Keys.Contains("ViewedProductIds"))
             {
-                HttpContext.Session.Set<List<int>>("ViewedProductIds", new List<int>());
+                HttpContext.Session.Set<List<Guid>>("ViewedProductIds", new List<Guid>());
             }
-            if (User.Claims.FirstOrDefault(c=>c.Type == ClaimTypes.Name) != null && !HttpContext.Session.Get<List<int>>("ViewedProductIds")!.Contains(id))
+            if (User.Claims.FirstOrDefault(c=>c.Type == ClaimTypes.Name) != null && !HttpContext.Session.Get<List<Guid>>("ViewedProductIds")!.Contains(id))
             {
                 Product productViewed = _context.Products.First(product => product.Id == id);
                 ++productViewed.Views;
                 _context.SaveChanges();
-                List<int> newViewedProductIds = HttpContext.Session.Get<List<int>>("ViewedProductIds")!;
+                List<Guid> newViewedProductIds = HttpContext.Session.Get<List<Guid>>("ViewedProductIds")!;
                 newViewedProductIds.Add(id);
-                HttpContext.Session.Set<List<int>>("ViewedProductIds", newViewedProductIds);
+                HttpContext.Session.Set<List<Guid>>("ViewedProductIds", newViewedProductIds);
             }
             return FormDetailsPage(id, name, rating, page, sortOrder);
         }
 
         
-        [Route("Details/{id:int}")]
+        [Route("Details/{id}")]
         [HttpPost]
-        public IActionResult Details(int id,string username, int rating, string message)
+        public IActionResult Details(Guid id,string username, int rating, string message)
         {
-            int userId = _context.Users.AsNoTracking().First(x => x.Username == username).Id;
+            Guid userId = _context.Users.AsNoTracking().First(x => x.Username == username).Id;
             _context.Reviews.Add(new Review()
             {
                 Message = message,
@@ -121,23 +125,29 @@ namespace Task_1.Controllers
             return FormDetailsPage(id, "", 0, 1, SortState.NameAsc);
         }
 
-        [Route("Store")]
-        [Route("Buy")]
+        [Route("Store/{page:int?}")]
+        [Route("Buy/{page:int?}")]
         [LastVisitResourceFilter]
-        public async Task<IActionResult> Store()
+        public async Task<IActionResult> Store(int page)
         {
             StoreViewModel model = new StoreViewModel();
-            model.Products = _context.Products.AsNoTracking().ToList();
+            if (page < 0) page = 0;
+            int totalPages = (int)Math.Ceiling(_context.Products.Count() / (double)_pageItemCount) - 1;
+            model.HasPreviousPage = page > 0;
+            model.HasNextPage = page < totalPages;
+
+            ViewData["page"] = page;
+            model.Products = _context.Products.AsNoTracking().ToList().Take(new Range(page*_pageItemCount,(page+1)*_pageItemCount)).ToList();
             if (model.Products.Count == 0)
             {
-                var apiUrl = $"https://dummyjson.com/products";
+                var apiUrl = "https://dummyjson.com/products";
                 using (HttpClient client = new HttpClient())
                 {
                     var response = await client.GetAsync(apiUrl);
 
                     if (!response.IsSuccessStatusCode)
                     {
-                        return BadRequest("Error fetching data from the API.");
+                        return BadRequest();
                     }
 
                     var json = await response.Content.ReadAsStringAsync();
@@ -146,8 +156,9 @@ namespace Task_1.Controllers
                     {
                         foreach (var item in searchResults.products)
                         {
-                            model.Products.Add(new Product()
+                            _context.Products.Add(new Product()
                             {
+                                Id = Guid.NewGuid(),
                                 Title = item.Title,
                                 Price = item.Price,
                                 Rating = item.Rating,
@@ -159,8 +170,8 @@ namespace Task_1.Controllers
                                 Thumbnail = item.Thumbnail
                             });
                         }
-                        _context.Products.AddRange(model.Products);
-                        _context.SaveChanges();
+                        await _context.SaveChangesAsync();
+                        model.Products = _context.Products.AsNoTracking().ToList().Take(new Range(page * _pageItemCount, (page + 1) * _pageItemCount)).ToList();
                     }
                 }
             }

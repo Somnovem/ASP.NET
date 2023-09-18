@@ -6,5 +6,7 @@ namespace Task_1.ViewModels
     {
         public List<Product> Products { get; set; } = new();
         public List<string> Categories { get; set; } = new();
+        public bool HasPreviousPage { get; set; } = true;
+        public bool HasNextPage { get; set; } = true;
     }
 }
