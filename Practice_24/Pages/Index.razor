@@ -71,6 +71,11 @@
 
     <!-- Calculator Buttons -->
     <div class="calc-button-row">
+        <button style="width:20%; font-size: 1.05rem; height:50px;" @onclick=MemoryClear>MC</button>
+        <button style="width:20%; font-size: 1.05rem; height:50px;" @onclick=MemoryRecall>MR</button>
+        <button style="width:20%; font-size: 1.05rem; height:50px;" @onclick=MemoryAdd>M+</button>
+        <button style="width:20%; font-size: 1.05rem; height:50px;" @onclick=MemorySubstract>M-</button>
+        <button style="width:20%; font-size: 1.05rem; height:50px;" @onclick=MemoryStore>MS</button>
         <button class="ac" @onclick="Clear">AC</button>
         <button class="opt" @onclick="Opposite">&#43;&#47;&#8722;</button>
         <button class="opt" @onclick='() => ConfirmAction("Mod")'>&#37;</button>
@@ -105,7 +110,8 @@
     private string numberHolder = "0";
     private string action;
     private string history;
-    private bool performedAction = false;
+    private bool performedAction;
+    private float memoryNumber;
 
     private void ConfirmAction(string clickedAction)
     {
@@ -200,5 +206,30 @@
                 break;
         }
         performedAction = true;
+    }
+
+    private void MemoryStore()
+    {
+        memoryNumber = float.Parse(numberHolder);
+    }
+
+    private void MemoryAdd()
+    {
+        memoryNumber += float.Parse(numberHolder);
+    }
+    
+    private void MemorySubstract()
+    {
+        memoryNumber -= float.Parse(numberHolder);
+    }
+
+    private void MemoryRecall()
+    {
+        numberHolder = memoryNumber.ToString();
+    }
+    
+    private void MemoryClear()
+    {
+        memoryNumber = 0;
     }
 }

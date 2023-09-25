@@ -4,7 +4,7 @@
     ViewData["Title"] = "Lorem Reviews";
 }
 
-@if (Model.IsManager)
+@if (User.IsInRole("manager"))
 {
     <container class="mt-5">
         <main-text>User messages</main-text>

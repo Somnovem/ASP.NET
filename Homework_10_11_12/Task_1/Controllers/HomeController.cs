@@ -24,6 +24,22 @@ namespace Task_1.Controllers
         {
             _logger = logger;
             _context = db;
+            if (!_context.Managers.Any())
+            {
+                _context.Managers.Add(new Manager()
+                {
+                    Id = new Guid(),
+                    Username = "adminadmin",
+                    FirstName = "admin",
+                    LastName = "admin",
+                    Email = "adminadmin@gmail.com",
+                    Gender = 'M',
+                    BirthDate = DateTime.Parse("01.01.2000"),
+                    EmployedDate = DateTime.Parse("01.01.2018"),
+                    Password = ">��m�{3Ot�_�>N����Q�����?�J��"
+                });
+                _context.SaveChanges();
+            }
             _pageItemCount = 12;
         }
 
@@ -108,7 +124,6 @@ namespace Task_1.Controllers
             return FormDetailsPage(id, name, rating, page, sortOrder);
         }
 
-        
         [Route("Details/{id}")]
         [HttpPost]
         public IActionResult Details(Guid id,string username, int rating, string message)
@@ -190,9 +205,7 @@ namespace Task_1.Controllers
             {
                 ReviewsViewModel model = new ReviewsViewModel();
                 model.Username = identity.FindFirst(ClaimTypes.Name)?.Value;
-                bool.TryParse(Request.Cookies["IsManager"], out bool isManagerValue);
-                model.IsManager = isManagerValue;
-                if (model.IsManager)
+                if (User.IsInRole("manager"))
                 {
                     model.UserMessages = _context.UserMessages.AsNoTracking().ToList();
                 }

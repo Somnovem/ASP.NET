@@ -8,17 +8,11 @@
 
 @if (Model.IsLoggedIn)
 {
-    <main-text>You are already logged in,@Model.Username!</main-text>
+    <main-text>You are already logged in, @Model.Username!</main-text>
     <form method="post">
         <input type="hidden" asp-for="IsLoggingOut" value="true">
         <button class="btn btn-danger mt-3" type="submit">Log Out</button>
     </form>
-    @if (Model.IsManager)
-    {
-        <div style="margin-top:3%;">
-            <a asp-area="" asp-controller="Account" asp-action="Moderation" id="btn-moderation">Moderate users</a>
-        </div>
-    }
 }
 else
 {

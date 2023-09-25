@@ -25,8 +25,6 @@ public class AccountController : Controller
           var identity = HttpContext.User.Identity as ClaimsIdentity;
           model.IsLoggedIn = (identity != null && identity.IsAuthenticated);
           model.Username = identity.FindFirst(ClaimTypes.Name)?.Value;
-          bool.TryParse(Request.Cookies["IsManager"], out bool isManagerValue);
-          model.IsManager = isManagerValue;
           return View(model);
       }
 
@@ -40,6 +38,7 @@ public class AccountController : Controller
               await HttpContext.SignOutAsync();
               return RedirectToAction("Auth");
           }
+        bool isManager = false;
           if (person.IsLogin)
           {
               string encryptedPassword = Encrypter.CalculateSHA256(person.Password);
@@ -50,6 +49,7 @@ public class AccountController : Controller
                   if (manager != null)
                   {
                       Response.Cookies.Append("IsManager", "True");
+                      isManager = true;
                   }
                   else
                   {
@@ -84,6 +84,7 @@ public class AccountController : Controller
           {
               new Claim(ClaimTypes.Name, person.Username)
           };
+          if (isManager) claims.Add(new Claim(ClaimTypes.Role, "manager"));
           var identity = new ClaimsIdentity(claims, "LoremIpsumAuthScheme");
           var principal = new ClaimsPrincipal(identity);
           await HttpContext.SignInAsync("LoremIpsumAuthScheme", principal);

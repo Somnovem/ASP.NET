@@ -1,0 +1,321 @@
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (41ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Managers] AS [m]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (22ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Managers] AS [m]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Managers] AS [m]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Managers] AS [m]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views], [t].[Id], [t].[Message], [t].[ProductId], [t].[Rating], [t].[UserId], [t].[Id0], [t].[BirthDate], [t].[Email], [t].[Gender], [t].[Password], [t].[Username]
+FROM [Products] AS [p]
+LEFT JOIN (
+    SELECT [r].[Id], [r].[Message], [r].[ProductId], [r].[Rating], [r].[UserId], [u].[Id] AS [Id0], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+    FROM [Reviews] AS [r]
+    INNER JOIN [Users] AS [u] ON [r].[UserId] = [u].[Id]
+) AS [t] ON [p].[Id] = [t].[ProductId]
+WHERE [p].[Id] = @__id_0
+ORDER BY [p].[Id], [t].[Id]
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Reviews] AS [r]
+Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Message], [r].[ProductId], [r].[Rating], [r].[UserId], [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Reviews] AS [r]
+INNER JOIN [Users] AS [u] ON [r].[UserId] = [u].[Id]
+WHERE [r].[ProductId] = @__id_0
+ORDER BY [u].[Username]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+Now listening on: https://localhost:7212
+Now listening on: http://localhost:5185
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\Projects\ASP.NET_Learning\ASP.NET\Homework_10_11_12\Task_1
+Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Managers] AS [m]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (19ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+ORDER BY [p].[Views] DESC
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Managers] AS [m]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Managers] AS [m]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views]
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Managers] AS [m]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views], [t].[Id], [t].[Message], [t].[ProductId], [t].[Rating], [t].[UserId], [t].[Id0], [t].[BirthDate], [t].[Email], [t].[Gender], [t].[Password], [t].[Username]
+FROM [Products] AS [p]
+LEFT JOIN (
+    SELECT [r].[Id], [r].[Message], [r].[ProductId], [r].[Rating], [r].[UserId], [u].[Id] AS [Id0], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+    FROM [Reviews] AS [r]
+    INNER JOIN [Users] AS [u] ON [r].[UserId] = [u].[Id]
+) AS [t] ON [p].[Id] = [t].[ProductId]
+WHERE [p].[Id] = @__id_0
+ORDER BY [p].[Id], [t].[Id]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Reviews] AS [r]
+Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Message], [r].[ProductId], [r].[Rating], [r].[UserId], [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Reviews] AS [r]
+INNER JOIN [Users] AS [u] ON [r].[UserId] = [u].[Id]
+WHERE [r].[ProductId] = @__id_0
+ORDER BY [u].[Username]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Managers] AS [m]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Brand], [p].[Category], [p].[Description], [p].[DiscountPercentage], [p].[Price], [p].[Rating], [p].[Stock], [p].[Thumbnail], [p].[Title], [p].[Views], [t].[Id], [t].[Message], [t].[ProductId], [t].[Rating], [t].[UserId], [t].[Id0], [t].[BirthDate], [t].[Email], [t].[Gender], [t].[Password], [t].[Username]
+FROM [Products] AS [p]
+LEFT JOIN (
+    SELECT [r].[Id], [r].[Message], [r].[ProductId], [r].[Rating], [r].[UserId], [u].[Id] AS [Id0], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+    FROM [Reviews] AS [r]
+    INNER JOIN [Users] AS [u] ON [r].[UserId] = [u].[Id]
+) AS [t] ON [p].[Id] = [t].[ProductId]
+WHERE [p].[Id] = @__id_0
+ORDER BY [p].[Id], [t].[Id]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Reviews] AS [r]
+Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Message], [r].[ProductId], [r].[Rating], [r].[UserId], [u].[Id], [u].[BirthDate], [u].[Email], [u].[Gender], [u].[Password], [u].[Username]
+FROM [Reviews] AS [r]
+INNER JOIN [Users] AS [u] ON [r].[UserId] = [u].[Id]
+WHERE [r].[ProductId] = @__id_0
+ORDER BY [u].[Username]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
